@@ -1,2 +1,2 @@
 # GWENA2GeneOntology
-Bionformatics Tool to Convert Gene Co-expression Network Analysis to Gene Ontology Visualizations
+Bionformatics Tool to Convert Gene Co-expression Network Analysis to Gene Ontology Visualizations using GOFigure! & Metascape Tools
