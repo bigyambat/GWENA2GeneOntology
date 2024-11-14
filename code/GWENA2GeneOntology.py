@@ -36,9 +36,9 @@ def seperate_module_genes(sample_sheet):
     return 
 
 
-def metascape_docker_run(image_name, output_directory):
+def metascape_docker_run(module_gene_list, output_directory):
     """
-    Run Metascape docker container for 
+    Run Metascape docker container to pefom gene metascape comparison
     https://metascape.org/gp/index.html#/menu/msbio
 
     Metascape Docker file must be downloaded with authentication from Metascape website.
@@ -49,15 +49,32 @@ def metascape_docker_run(image_name, output_directory):
     """
     try:
         client = docker.from_env()
-        client.containers.run(image_name, f"bin/ms.sh -u -o /data/output_single_id_txt /data/example/single_list_id.txt", remove=True)
+        client.containers.run(image_name, f"bin/ms.sh -u -o output_directory/metascape /data/example/single_list_id.txt", remove=True)
         
     except Exception as e:
         print(f"Error: {e}")
     
+def GoFigure_run(module_gene_list, output_directory):
+    """
+    Run GoFigure to perform gene ontology analysis
+    """
+        command = [
+        "python3",
+        "/Users/bigyambat/miniforge3/pkgs/go-figure-1.0.2-hdfd78af_0/python-scripts/gofigure.py",
+        "-i", "/Users/bigyambat/Desktop/spaceranger_concat_runs/GWENA_data/Post_Filtering_GWENA_Data/GO_Terms_Post_Filtering.tsv",
+        "-o", "output_directory/GoFigure",
+        ]
+
+    try:
+        GoFigure_Command = subprocess.run(command, capture_output=True, text=True)
+    except Exception as e:
+        print(f"Error: {e}")=
 
 def main():
-    print("Hello World!")
-
+    create_gene_list(args.gwena_enrichment_file)
+    seperate_module_genes(sample_sheet)
+    metascape_docker_run(module_gene_list, output_directory)
+    GoFigure_run(module_gene_list, output_directory)
 
 if __name__ == "__main__":
     main()
