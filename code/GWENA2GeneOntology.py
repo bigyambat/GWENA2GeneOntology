@@ -11,6 +11,7 @@ parser = argparse.ArgumentParser(description='GWENA2GeneOntology')
 
 parser.add_argument('--gwena_enrichment_file', type=str, help='Input file path')
 parser.add_argument('--output_directory', type=str, help='Output directory path')
+parser.add_argument('--go_figure_download_location', type=str, help='Docker image name')
 
 #Parse Arguments
 args = parser.parse_args()
@@ -24,7 +25,6 @@ def create_gene_list(input_file):
     enrichment_data = pd.read_excel(input_file, header=None)
     module = enrichment_data.iloc[:, 0]
     go_pathway = enrichment_data.iloc[:, 5]
-
     sample_sheet = pd.create_data_frame(module, go_pathway)
 
     return sample_sheet
@@ -49,7 +49,7 @@ def metascape_docker_run(module_gene_list, output_directory):
     """
     try:
         client = docker.from_env()
-        client.containers.run(image_name, f"bin/ms.sh -u -o output_directory/metascape /data/example/single_list_id.txt", remove=True)
+        client.containers.run(image_name, f"bin/ms.sh -u -o {output_directory}/metascape /data/example/single_list_id.txt", remove=True)
         
     except Exception as e:
         print(f"Error: {e}")
@@ -62,19 +62,19 @@ def GoFigure_run(module_gene_list, output_directory):
         "python3",
         "/Users/bigyambat/miniforge3/pkgs/go-figure-1.0.2-hdfd78af_0/python-scripts/gofigure.py",
         "-i", "/Users/bigyambat/Desktop/spaceranger_concat_runs/GWENA_data/Post_Filtering_GWENA_Data/GO_Terms_Post_Filtering.tsv",
-        "-o", "output_directory/GoFigure",
+        "-o", "{output_directory}/GoFigure",
         ]
 
     try:
         GoFigure_Command = subprocess.run(command, capture_output=True, text=True)
     except Exception as e:
-        print(f"Error: {e}")=
+        print(f"Error: {e}")
 
 def main():
     create_gene_list(args.gwena_enrichment_file)
     seperate_module_genes(sample_sheet)
     metascape_docker_run(module_gene_list, output_directory)
-    GoFigure_run(module_gene_list, output_directory)
+    GoFigure_run(module_gene_list, output_directory, go_figure_download_location)
 
 if __name__ == "__main__":
     main()
