@@ -6,6 +6,8 @@ import pandas as pd
 import numpy as np
 import docker
 import argparse
+import subprocess
+import os
 
 parser = argparse.ArgumentParser(description='GWENA2GeneOntology')
 
@@ -25,15 +27,17 @@ def create_gene_list(input_file):
     enrichment_data = pd.read_excel(input_file, header=None)
     module = enrichment_data.iloc[:, 0]
     go_pathway = enrichment_data.iloc[:, 5]
-    sample_sheet = pd.create_data_frame(module, go_pathway)
-
+    sample_sheet = pd.DataFrame('module' = module, 'go_pathway' = go_pathway)
     return sample_sheet
 
-def seperate_module_genes(sample_sheet):
-    for i in range(len(unique(sample_sheet['module']))):
+def seperate_module_genes(sample_sheet, output_directory):
+    module_files = []
+    for i in pd.sample_sheet['module'].unique():
         module = sample_sheet[sample_sheet['module'] == i]
-        module.to_tsv(f"module_gene_list{i}.tsv")
-    return 
+        module_file = os.path.join(output_directory, f"module_{i}_gene_list.csv")
+        module.to_csv(f"{output_directory}/module_gene_list/module_{i}_gene_list.csv", sep="\t", index=False)
+        module_files.append(module_file)
+    return module_files
 
 
 def metascape_docker_run(module_gene_list, output_directory):
@@ -54,16 +58,16 @@ def metascape_docker_run(module_gene_list, output_directory):
     except Exception as e:
         print(f"Error: {e}")
     
-def GoFigure_run(module_gene_list, output_directory):
+def GoFigure_run(module_gene_list, output_directory, go_figure_download_location):
     """
     Run GoFigure to perform gene ontology analysis
     """
-        command = [
-        "python3",
-        "/Users/bigyambat/miniforge3/pkgs/go-figure-1.0.2-hdfd78af_0/python-scripts/gofigure.py",
-        "-i", "/Users/bigyambat/Desktop/spaceranger_concat_runs/GWENA_data/Post_Filtering_GWENA_Data/GO_Terms_Post_Filtering.tsv",
-        "-o", "{output_directory}/GoFigure",
-        ]
+    command = [
+    "python3",
+    "/Users/bigyambat/miniforge3/pkgs/go-figure-1.0.2-hdfd78af_0/python-scripts/gofigure.py",
+    "-i", module_gene_list,
+    "-o", "f{output_directory}/GoFigure",
+    ]
 
     try:
         GoFigure_Command = subprocess.run(command, capture_output=True, text=True)
@@ -71,10 +75,19 @@ def GoFigure_run(module_gene_list, output_directory):
         print(f"Error: {e}")
 
 def main():
-    create_gene_list(args.gwena_enrichment_file)
-    seperate_module_genes(sample_sheet)
-    metascape_docker_run(module_gene_list, output_directory)
-    GoFigure_run(module_gene_list, output_directory, go_figure_download_location)
+
+    if not os.path.exists(args.output_directory):
+        os.path.makedirs(args.output_directory)
+
+    #Creating Sample Sheet
+    sample_sheet = create_gene_list(args.gwena_enrichment_file)
+
+    module_gene_files = seperate_module_genes(sample_sheet, args.output_directory)
+
+    for module_gene_file in module_gene_files:
+        print(f"Running Metascape and GoFigure for {module_gene_file}")
+        metascape_docker_run(module_gene_file, args.output_directory)
+        GoFigure_run(module_gene_file, args.output_directory, args.go_figure_download_location)
 
 if __name__ == "__main__":
     main()
