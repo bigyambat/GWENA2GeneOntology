@@ -1,0 +1,12 @@
+{"input":"/data/example/single_list_id.txt", "output":"/data/output_single_id_txt", "single":true, "option":"/data/example/option.json"}
+{"input":"/data/example/single_list_id.csv", "output":"/data/output_single_id_csv", "single":true}
+{"input":"/data/example/single_list_id.xlsx", "output":"/data/output_single_id_xlsx", "single":true}
+{"input":"/data/example/single_list_symbol.txt", "output":"/data/output_single_sym_txt", "single":true}
+{"input":"/data/example/single_list_symbol.csv", "output":"/data/output_single_sym_csv", "single":true}
+{"input":"/data/example/single_list_id.rat.csv", "source_tax_id":"rat", "output":"/data/output_single_id_rat", "single":true}
+{"input":"/data/example/multiple_list_id.txt", "output":"/data/output_multiple_id_txt", "option":"/data/example/option.json"}
+{"input":"/data/example/multiple_list_id.csv", "output":"/data/output_multiple_id_csv"}
+{"input":"/data/example/multiple_list_id.xlsx", "output":"/data/output_multiple_id_xlsx"}
+{"input":"/data/example/multiple_list_symbol.txt", "output":"/data/output_multiple_sym_txt"}
+{"input":"/data/example/multiple_list_symbol.csv", "output":"/data/output_multiple_sym_csv"}
+{"input":"/data/example/multiple_list_id_bg.xlsx", "output":"/data/output_multiple_id_xlsx_bg"}
