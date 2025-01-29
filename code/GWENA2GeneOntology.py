@@ -9,7 +9,7 @@
 # Command Line Usage:
 # python GWENA2GeneOntology.py --gwena_enrichment_file /path/to/gwena_enrichment_file.xlsx --output_directory /path/to/output_directory --metascape_download_location /path/to/metascape_download_location
 
-
+# Test Run
 # /Users/bigyambat/Desktop/GWENA2GeneOntology/code/GWENA2GeneOntology.py --gwena_enrichment_file /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/Enrichment_Complete.xlsx --output_directory /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data --metascape_download_location /Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20240901
 
 import pandas as pd
@@ -19,8 +19,8 @@ import argparse
 import subprocess
 import os
 
+#Create option parser
 parser = argparse.ArgumentParser(description='GWENA2GeneOntology')
-
 parser.add_argument('--gwena_enrichment_file', type=str, help='Input file path')
 parser.add_argument('--output_directory', type=str, help='Output directory path')
 parser.add_argument('--metascape_download_location_download_location', type=str, help='Metascape Docker image file location')
@@ -70,6 +70,10 @@ def GoFigure_run(module_gene_list, output_directory):
     """
     Run GoFigure! to perform gene ontology analysis on module gene list
     """
+
+    #Filtering out non-GO pathways
+    module_gene_list = module_gene_list[module_gene_list.str.startswith("GO:", na=False)]
+
     command = [
     "python3",
     "/Users/bigyambat/miniforge3/pkgs/go-figure-1.0.2-hdfd78af_0/python-scripts/gofigure.py",
