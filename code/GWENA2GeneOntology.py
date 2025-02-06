@@ -56,12 +56,18 @@ class GWENAAnalysis:
 
         try:
             for i in sample_sheet['query'].unique():
-                i = int(i)
+                try:
+                #Convert to int
+                    i = int(i)
+                except ValueError as e:
+                    logger.error(f"Error converting {i} to int: {str(e)}")
+                    continue
+
                 module = sample_sheet[sample_sheet['query'] == i]
                 file_path = module_path / f"module_{i}_gene_list.csv"
                 module.to_csv(file_path, sep="\t", index=False)
-                module_files.append(module)
-        
+                module_files.append(file_path)
+       
         except Exception as e:
             logger.error(f"Error: {str(e)}")
             raise 
