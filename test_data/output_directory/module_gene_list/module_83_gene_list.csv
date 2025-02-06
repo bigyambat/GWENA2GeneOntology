@@ -1,0 +1,2 @@
+query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
+83	True	0.0132515047216346	3	33	2	0.0606060606060606	0.666666666666667	GO:0036228	GO:BP	protein localization to nuclear inner membrane	21031	9828	GO:0072657, GO:0090435

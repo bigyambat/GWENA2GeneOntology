@@ -1,0 +1,4 @@
+query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
+52	True	0.0259070253434843	6	40	2	0.05	0.333333333333333	GO:0034481	GO:MF	chondroitin sulfotransferase activity	20212	4982	GO:0008146
+52	True	0.0131978892641407	6951	42	29	0.69047619047619	0.00417206157387426	TF:M11490	TF	Factor: LBP-1; motif: NRCCGGTNNNNACCGGYN	20045	4684	TF:M00000
+52	True	0.0176452690776496	6173	42	27	0.642857142857143	0.00437388627895675	TF:M11490_1	TF	Factor: LBP-1; motif: NRCCGGTNNNNACCGGYN; match class: 1	20045	4685	TF:M11490

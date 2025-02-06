@@ -1,0 +1,5 @@
+query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
+30	True	0.0334286970750527	40	55	3	0.0545454545454545	0.075	GO:0070069	GO:CC	cytochrome complex	22097	2423	GO:1902494
+30	True	0.0332984777423014	5	52	2	0.0384615384615385	0.4	GO:0004741	GO:MF	[pyruvate dehydrogenase (acetyl-transferring)]-phosphatase activity	20212	1025	GO:0004722
+30	True	0.00624657591888305	18	10	3	0.3	0.166666666666667	HP:0011359	HP	Dry hair	4958	7764	HP:0010719
+30	True	0.0330734825410891	2981	54	21	0.388888888888889	0.00704461590070446	TF:M00342	TF	Factor: Oct-1; motif: TATGCAAATN	20045	6216	TF:M00000

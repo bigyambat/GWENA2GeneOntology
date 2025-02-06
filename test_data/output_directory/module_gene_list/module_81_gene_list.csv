@@ -1,0 +1,2 @@
+query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
+81	True	0.0201505416474653	28	9	2	0.222222222222222	0.0714285714285714	KEGG:00601	KEGG	Glycosphingolipid biosynthesis - lacto and neolacto series	8484	96	KEGG:00000

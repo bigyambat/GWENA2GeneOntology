@@ -1,0 +1,4 @@
+query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
+54	True	0.0496799370058398	1	4	1	0.25	1.0	CORUM:3098	CORUM	TIM50-SMN1 complex	3383	1394	CORUM:0000000
+54	True	0.0499510383998301	9	38	2	0.0526315789473684	0.222222222222222	GO:0016801	GO:MF	hydrolase activity, acting on ether bonds	20212	2990	GO:0016787
+54	True	0.0499510383998301	9	38	2	0.0526315789473684	0.222222222222222	GO:0016803	GO:MF	ether hydrolase activity	20212	2992	GO:0016801

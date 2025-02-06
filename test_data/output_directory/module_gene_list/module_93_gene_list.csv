@@ -1,0 +1,3 @@
+query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
+93	True	0.0426616143199939	419	4	4	1.0	0.00954653937947494	HP:0100037	HP	Abnormality of the scalp hair	4958	15582	HP:0001595, HP:0001965
+93	True	0.0477820063607025	431	4	4	1.0	0.00928074245939675	HP:0001965	HP	Abnormal scalp morphology	4958	1431	HP:0000234

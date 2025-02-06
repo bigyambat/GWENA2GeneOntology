@@ -1,0 +1,2 @@
+query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
+66	True	0.0498194873906892	1	6	1	0.166666666666667	1.0	CORUM:2321	CORUM	ITGA6-ITGB4-FYN complex	3383	981	CORUM:0000000

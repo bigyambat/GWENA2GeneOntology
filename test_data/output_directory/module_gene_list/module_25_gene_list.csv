@@ -1,0 +1,2 @@
+query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
+25	True	0.0262343033892555	17834	55	54	0.981818181818182	0.00302792418974992	GO:0005622	GO:CC	intracellular anatomical structure	22097	237	GO:0110165
