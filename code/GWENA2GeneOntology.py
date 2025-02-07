@@ -34,15 +34,15 @@ class GWENAAnalysis:
     """Class to handle GWENA enrichment analysis operations"""
     def __init__(self, input_file: str, output_dir: str, metascape_location: str):
         self.input_file = input_file
-        self.output_dir = output_dir
-        self.metascape_location = metascape_location
+        self.output_dir = Path(output_dir)
+        self.metascape_location = Path(metascape_location)
 
-        self._validate_inputs
+        self._validate_inputs()
 
     def _validate_inputs(self) -> None:
-        if not os.path.exists(self.input_file):
+        if not Path(self.input_file).exists():
             raise FileNotFoundError(f"Input file {self.input_file} not found")
-        if not os.path.exists(self.metascape_location):
+        if not Path(self.metascape_location).exists():
             raise FileNotFoundError(f"Metascape location {self.metascape_location} not found")
         
         self.output_dir.mkdir(parents=True, exist_ok=True)
@@ -77,15 +77,21 @@ class GWENAAnalysis:
         """ Run Metascape container for gene analysis"""
 
         try:
-            client = docker.from_env()
             output_path = Path(self.output_dir) / "metascape" / module_file.stem
+            output_path.mkdir(parents=True, exist_ok=True)
 
-            command = f"{self.metascape_location}/bin/ms.sh -u -o {output_path} {module_file}"
+            command = [
+                f"{self.metascape_location}/bin/ms.sh",
+                "-u",
+                "-o", str(output_path),
+                str(module_file)
+            ]
 
-            client.containers.run(self.metascape_location, command, remove=True)
-
-            logger.info(f"Completed Metascape analysi for {module_file.name}")
-        
+            result = subprocess.run(command, capture_output=True, text=True, check=True)
+            logger.info(f"Completed Metascape analysis for {module_file.name}")
+        except subprocess.CalledProcessError as e:
+            logger.error(f"Metascape Error: {e.stderr}")
+            raise
         except Exception as e:
             logger.error(f"Error running Metascape for {module_file.name}: {str(e)}")
             raise
