@@ -1,0 +1,2 @@
+karaf.base: /msbio/cytoscape/framework
+JAVA_HOME: /usr/lib/jvm/java-17-openjdk-17.0.10.0.7-2.0.1.el8.x86_64
