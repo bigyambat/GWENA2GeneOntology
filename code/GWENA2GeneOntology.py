@@ -1,5 +1,6 @@
 
-#
+# GWENA2GeneOntology Package
+
 # Conda Environment Setup
 # conda create -n gwenav2
 # conda activate gwenav2
@@ -72,6 +73,25 @@ class GWENAAnalysis:
             logger.error(f"Error: {str(e)}")
             raise 
         return module_files
+    
+    def select_genes(self, module_files: List[Path]) -> Dict[str, List[str]]:
+        """ Select genes from module files"""
+        try:
+            for module_file in module_files:
+                try:
+                    df = pd.create_csv(module_file, sep="\t")
+                    df = df[df['gene', 'p_value']]
+                    df.to_csv(module_file, sep="\t", index=False)
+                except Exception as e:
+                    logger.error(f"Error selecting genes from {module_file}: {str(e)}")
+                    raise
+        except Exception as e:
+            logger.error(f"Error: {str(e)}")
+            raise
+        return module_files
+        
+
+
 
     def run_metascape_analysis(self, module_file: Path) -> None:
         """ Run Metascape container for gene analysis"""
