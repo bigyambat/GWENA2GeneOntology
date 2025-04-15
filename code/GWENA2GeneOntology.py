@@ -1,4 +1,3 @@
-
 # GWENA2GeneOntology Package
 
 # Conda Environment Setup
@@ -58,7 +57,7 @@ class GWENAAnalysis:
         try:
             for i in sample_sheet['query'].unique():
                 try:
-                #Convert to int
+                    # Convert to int
                     i = int(i)
                 except ValueError as e:
                     logger.error(f"Error converting {i} to int: {str(e)}")
@@ -74,24 +73,49 @@ class GWENAAnalysis:
             raise 
         return module_files
     
-    def select_genes(self, module_files: List[Path]) -> Dict[str, List[str]]:
-        """ Select genes from module files"""
+    def select_GO_genes_and_pvalue(self, module_files: List[Path]) -> List[Path]:
+        """Select genes from module files that are part of GO atlas"""
+        
+        go_module_path = Path(self.output_dir) / "go_gene_list"
+        go_module_path.mkdir(exist_ok=True)
+        
+        filtered_module_files = []
+        
         try:
             for module_file in module_files:
                 try:
-                    df = pd.create_csv(module_file, sep="\t")
-                    df = df[df['gene', 'p_value']]
-                    df.to_csv(module_file, sep="\t", index=False)
+                    # Extract module number from filename
+                    module_num = module_file.stem.split('_')[1]
+                    
+                    # Read the original module file
+                    df = pd.read_csv(module_file, sep="\t")
+                    
+                    # Select only the genes and p-values
+                    filtered_df = df[['gene', 'p_value']]
+                    
+                    # Here you would add logic to filter for genes in the GO atlas
+                    # For example, if you have a list of GO genes:
+                    # go_genes = set(pd.read_csv('path_to_go_genes.txt')['gene'])
+                    # filtered_df = filtered_df[filtered_df['gene'].isin(go_genes)]
+                    
+                    # Create the output file path
+                    go_file_path = go_module_path / f"module_{module_num}_go_genes.csv"
+                    
+                    # Save the filtered genes
+                    filtered_df.to_csv(go_file_path, sep="\t", index=False)
+                    filtered_module_files.append(go_file_path)
+                    
+                    logger.info(f"Created GO gene list for module {module_num}")
+                    
                 except Exception as e:
-                    logger.error(f"Error selecting genes from {module_file}: {str(e)}")
-                    raise
+                    logger.error(f"Error selecting GO genes from {module_file}: {str(e)}")
+                    continue
+                    
         except Exception as e:
-            logger.error(f"Error: {str(e)}")
+            logger.error(f"Error in GO gene selection process: {str(e)}")
             raise
-        return module_files
-        
-
-
+            
+        return filtered_module_files
 
     def run_metascape_analysis(self, module_file: Path) -> None:
         """ Run Metascape container for gene analysis"""
@@ -141,8 +165,7 @@ class GWENAAnalysis:
             raise
 
 def main():
-
-    #Create option parser
+    # Create option parser
     parser = argparse.ArgumentParser(description='GWENA2GeneOntology')
     parser.add_argument('--gwena_enrichment_file', type=str, help='Input file path')
     parser.add_argument('--output_directory', type=str, help='Output directory path')
@@ -150,14 +173,21 @@ def main():
     args = parser.parse_args()
 
     try:
-        #Loading in gwena enrichment file as sample sheet 
+        logger.info("Starting GWENA2GeneOntology Analysis")
+        # Loading in gwena enrichment file as sample sheet 
         sample_sheet = pd.read_excel(args.gwena_enrichment_file)    
     
-        #Initialize Analysis
+        # Initialize Analysis
         analysis = GWENAAnalysis(args.gwena_enrichment_file, args.output_directory, args.metascape_download_location)
 
-        #Run Analyis
-        for module_file in analysis.create_gene_list(sample_sheet):
+        # Create initial gene lists
+        module_files = analysis.create_gene_list(sample_sheet)
+        
+        # Filter for GO genes
+        go_module_files = analysis.select_GO_genes_and_pvalue(module_files)
+        
+        # Run analyses on the GO-filtered gene lists
+        for module_file in go_module_files:
             logger.info(f"Running Metascape and GoFigure for {module_file}")
             analysis.run_metascape_analysis(module_file)
             analysis.run_go_figure_analysis(module_file)
@@ -170,4 +200,3 @@ def main():
         
 if __name__ == "__main__":
     main()
-        
