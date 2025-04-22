@@ -1,3 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-31	True	0.00865504452951965	3	32	2	0.0625	0.666666666666667	REAC:R-HSA-193681	REAC	Ceramide signalling	10842	334	REAC:R-HSA-193704
-31	True	0.0170676435533906	8567	50	37	0.74	0.0043188980973503	TF:M08451	TF	Factor: Elk-1:HOXA1; motif: ACCGGAAGTAATTA	20045	1842	TF:M00000

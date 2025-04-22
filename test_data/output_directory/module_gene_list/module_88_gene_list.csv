@@ -1,2 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-88	True	0.0163629747738562	5732	27	19	0.703703703703704	0.00331472435450105	TF:M09819	TF	Factor: SOX10; motif: NNAACAAAGNN	20045	7776	TF:M00000

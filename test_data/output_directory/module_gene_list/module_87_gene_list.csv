@@ -1,3 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-87	True	0.0359593894987015	4777	25	14	0.56	0.00293070965040821	GO:0012505	GO:CC	endomembrane system	22097	687	GO:0110165
-87	True	0.0243165945742087	24	11	2	0.181818181818182	0.0833333333333333	KEGG:00534	KEGG	Glycosaminoglycan biosynthesis - heparan sulfate / heparin	8484	78	KEGG:00000

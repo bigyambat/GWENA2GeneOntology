@@ -1,3 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-48	True	0.0477907896360894	354	36	6	0.166666666666667	0.0169491525423729	GO:0002237	GO:BP	response to molecule of bacterial origin	21031	777	GO:0009617, GO:0010033, GO:0043207
-48	True	0.0111675424038537	5	35	2	0.0571428571428571	0.4	GO:0097199	GO:MF	cysteine-type endopeptidase activity involved in apoptotic signaling pathway	20212	9075	GO:0097153

@@ -1,3 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-92	True	0.0498194873906892	1	6	1	0.166666666666667	1.0	CORUM:1530	CORUM	Girdin homo-oligomer complex	3383	775	CORUM:0000000
-92	True	0.0499437832584126	19	27	2	0.0740740740740741	0.105263157894737	GO:0044305	GO:CC	calyx of Held	22097	2058	GO:0043679

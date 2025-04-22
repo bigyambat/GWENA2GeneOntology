@@ -1,0 +1,3 @@
+dotCount	x	y	frequency	colour	size	pval	description	legend	members	representative	user
+1	0.4993497744710171	0.5006484804434967	1.839728378790937	-1.4611471173107053	0.6931471805599453	0.034582221066442	dichotomous subdivision of terminal...	1. dichotomous subdivision of terminal...	['GO:0060666']	GO:0060666	0
+2	-0.4993497744710171	-0.5006484804434967	1.4722642666634742	-1.3330981531628625	0.6931471805599453	0.0464410303841509	negative regulation of cell project...	2. negative regulation of cell project...	['GO:0031345']	GO:0031345	0

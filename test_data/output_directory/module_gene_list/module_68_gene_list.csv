@@ -1,6 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-68	True	0.0498194873906892	1	6	1	0.166666666666667	1.0	CORUM:6103	CORUM	proMBP-angiotensinogen complex	3383	1892	CORUM:0000000
-68	True	0.0335388684839477	14838	30	30	1.0	0.00202183582693085	GO:0005515	GO:MF	protein binding	20212	1492	GO:0005488
-68	True	0.00603700878131451	64	13	3	0.230769230769231	0.046875	KEGG:04927	KEGG	Cortisol synthesis and secretion	8484	384	KEGG:00000
-68	True	0.0213835555469762	98	13	3	0.230769230769231	0.0306122448979592	KEGG:04925	KEGG	Aldosterone synthesis and secretion	8484	382	KEGG:00000
-68	True	0.0392330306627478	16	14	2	0.142857142857143	0.125	WP:WP4589	WP	Major receptors targeted by epinephrine and norepinephrine	8286	475	WP:000000

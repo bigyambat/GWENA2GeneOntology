@@ -1,3 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-72	True	0.046593863862436	34	37	3	0.0810810810810811	0.0882352941176471	GO:0034405	GO:BP	response to fluid shear stress	21031	8912	GO:0006950
-72	True	0.0386943711836254	38	33	3	0.0909090909090909	0.0789473684210526	MIRNA:ebv-miR-BART13-3p	MIRNA	ebv-miR-BART13-3p	14819	3	MIRNA:000000

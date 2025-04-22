@@ -1,3 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-42	True	0.0141831408750776	6	46	2	0.0434782608695652	0.333333333333333	GO:0032133	GO:CC	chromosome passenger complex	22097	1251	GO:0005875
-42	True	0.0354901542276541	6	48	2	0.0416666666666667	0.333333333333333	GO:0070087	GO:MF	chromo shadow domain binding	20212	8609	GO:0019904

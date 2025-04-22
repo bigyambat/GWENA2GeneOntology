@@ -1,0 +1,23 @@
+GO-Figure! version: 1.0.1
+
+Date run: 2025-04-21
+
+Command line input: ['/Users/bigyambat/miniforge3/pkgs/go-figure-1.0.2-hdfd78af_0/python-scripts/gofigure.py', '-i', '/Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/GoFigure/module_11_data/module_11_gofigure.tsv', '-o', '/Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/GoFigure/module_11_data']
+
+go.obo version used: releases/2023-04-01
+
+go.obo version used to create GO relations: releases/2023-04-01
+
+
+Calculating biological process
+
+The following GO terms are converted or deleted because either they are an alt_id and not a primary id in the go.obo, because they are obsolete in the go.obo, or because they can't be found in the go.obo: 
+
+Original GO	New GO(s)	Reason
+	GO:0141124	removed
+
+Calculating molecular function
+
+
+Calculating cellular component
+

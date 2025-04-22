@@ -1,5 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-44	True	0.0498025102408535	5	13	2	0.153846153846154	0.4	CORUM:6854	CORUM	5FMC (Friends of Methylated Chtop) complex	3383	2420	CORUM:0000000
-44	True	0.0157517046419919	102	47	4	0.0851063829787234	0.0392156862745098	GO:0031248	GO:CC	protein acetyltransferase complex	22097	1071	GO:0140535, GO:1902493
-44	True	0.0163626919935488	103	47	4	0.0851063829787234	0.0388349514563107	GO:1902493	GO:CC	acetyltransferase complex	22097	3634	GO:1990234
-44	True	0.0399469761167034	143	20	4	0.2	0.027972027972028	WP:WP2853	WP	Endoderm differentiation	8286	163	WP:000000

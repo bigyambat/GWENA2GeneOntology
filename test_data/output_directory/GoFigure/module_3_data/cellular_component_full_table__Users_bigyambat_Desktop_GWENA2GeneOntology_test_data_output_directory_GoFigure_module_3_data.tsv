@@ -1,0 +1,56 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0005737	GO:0005737	cytoplasm	3.722e-28	0.000e+00	8.365e-01	1.457e-01
+GO:0070161	GO:0070161	anchoring junction	7.068e-11	0.000e+00	2.775e+00	1.679e-03
+GO:0070161	GO:0005911	cell-cell junction	7.417e-04	0.000e+00	2.979e+00	1.049e-03
+GO:0070161	GO:0030054	cell junction	8.470e-08	0.000e+00	2.538e+00	2.899e-03
+GO:0062023	GO:0062023	collagen-containing extracellular matrix	7.232e-10	0.000e+00	3.565e+00	2.724e-04
+GO:0062023	GO:0005604	basement membrane	1.013e-04	0.000e+00	3.746e+00	1.794e-04
+GO:0005829	GO:0005829	cytosol	1.078e-09	0.000e+00	2.561e+00	2.749e-03
+GO:0031982	GO:0031982	vesicle	7.840e-09	0.000e+00	2.580e+00	2.633e-03
+GO:0031982	GO:0097708	intracellular vesicle	9.421e-03	0.000e+00	2.592e+00	2.557e-03
+GO:0031982	GO:0031410	cytoplasmic vesicle	8.678e-03	0.000e+00	2.593e+00	2.552e-03
+GO:0043226	GO:0043226	organelle	8.551e-09	0.000e+00	8.071e-01	1.559e-01
+GO:0043226	GO:0043229	intracellular organelle	3.111e-06	0.000e+00	8.179e-01	1.521e-01
+GO:0012505	GO:0012505	endomembrane system	2.178e-08	0.000e+00	3.520e+00	3.021e-04
+GO:0031012	GO:0031012	extracellular matrix	2.803e-08	0.000e+00	3.305e+00	4.952e-04
+GO:0031012	GO:0030312	external encapsulating structure	2.977e-08	0.000e+00	3.090e+00	8.126e-04
+GO:0005654	GO:0005654	nucleoplasm	3.166e-08	0.000e+00	2.956e+00	1.106e-03
+GO:0070013	GO:0070013	intracellular organelle lumen	1.511e-07	0.000e+00	2.995e+00	1.011e-03
+GO:0070013	GO:0043233	organelle lumen	1.511e-07	0.000e+00	2.995e+00	1.011e-03
+GO:0070013	GO:0031974	membrane-enclosed lumen	1.511e-07	0.000e+00	2.995e+00	1.011e-03
+GO:0070013	GO:0005788	endoplasmic reticulum lumen	1.093e-02	0.000e+00	3.706e+00	1.968e-04
+GO:0070013	GO:0005759	mitochondrial matrix	1.229e-02	0.000e+00	3.362e+00	4.347e-04
+GO:0070013	GO:0031981	nuclear lumen	3.710e-02	0.000e+00	4.066e+00	8.598e-05
+GO:1902494	GO:1902494	catalytic complex	1.671e-07	0.000e+00	1.783e+00	1.647e-02
+GO:1902494	GO:1990234	transferase complex	2.501e-03	0.000e+00	2.248e+00	5.644e-03
+GO:0071944	GO:0071944	cell periphery	6.375e-07	0.000e+00	3.704e+00	1.976e-04
+GO:0070062	GO:0070062	extracellular exosome	1.056e-06	0.000e+00	4.521e+00	3.013e-05
+GO:0070062	GO:1903561	extracellular vesicle	9.724e-07	0.000e+00	4.477e+00	3.334e-05
+GO:0070062	GO:0065010	extracellular membrane-bounded organelle	9.976e-07	0.000e+00	4.465e+00	3.428e-05
+GO:0070062	GO:0043230	extracellular organelle	9.976e-07	0.000e+00	4.453e+00	3.521e-05
+GO:0005925	GO:0005925	focal adhesion	1.564e-06	0.000e+00	3.777e+00	1.669e-04
+GO:0005925	GO:0030055	cell-substrate junction	2.892e-06	0.000e+00	3.766e+00	1.714e-04
+GO:0005739	GO:0005739	mitochondrion	5.649e-06	0.000e+00	1.822e+00	1.507e-02
+GO:0005739	GO:0043227	membrane-bounded organelle	3.808e-07	0.000e+00	1.067e+00	8.568e-02
+GO:0005739	GO:0043231	intracellular membrane-bounded organelle	4.757e-05	0.000e+00	1.072e+00	8.467e-02
+GO:0005739	GO:0005783	endoplasmic reticulum	6.841e-04	0.000e+00	2.431e+00	3.708e-03
+GO:0005622	GO:0005622	intracellular anatomical structure	1.468e-05	0.000e+00	4.623e+00	2.381e-05
+GO:0016020	GO:0016020	membrane	6.254e-05	0.000e+00	2.812e-01	5.233e-01
+GO:0015629	GO:0005856	cytoskeleton	1.285e-04	0.000e+00	2.407e+00	3.919e-03
+GO:0015629	GO:0015629	actin cytoskeleton	2.296e-04	0.000e+00	3.697e+00	2.008e-04
+GO:0042641	GO:0042641	actomyosin	7.213e-04	0.000e+00	4.822e+00	1.506e-05
+GO:0042641	GO:0001725	stress fiber	1.806e-03	0.000e+00	4.874e+00	1.336e-05
+GO:0005615	GO:0005615	extracellular space	8.662e-04	0.000e+00	2.903e+00	1.250e-03
+GO:0097517	GO:0032432	actin filament bundle	9.209e-04	0.000e+00	4.776e+00	1.674e-05
+GO:0097517	GO:0097517	contractile actin filament bundle	1.806e-03	0.000e+00	4.874e+00	1.336e-05
+GO:0030424	GO:0030424	axon	3.966e-03	0.000e+00	3.784e+00	1.646e-04
+GO:0030424	GO:0030027	lamellipodium	6.358e-03	0.000e+00	3.866e+00	1.360e-04
+GO:0110165	GO:0110165	cellular anatomical entity	6.030e-03	0.000e+00	3.977e-02	9.125e-01
+GO:0005576	GO:0005576	extracellular region	6.355e-03	0.000e+00	1.966e+00	1.081e-02
+GO:0005886	GO:0005886	plasma membrane	7.843e-03	0.000e+00	9.811e-01	1.044e-01
+GO:0005938	GO:0005938	cell cortex	1.149e-02	0.000e+00	3.836e+00	1.458e-04
+GO:0031252	GO:0031252	cell leading edge	1.259e-02	0.000e+00	4.930e+00	1.176e-05
+GO:0031090	GO:0031090	organelle membrane	3.181e-02	0.000e+00	1.466e+00	3.418e-02
+GO:0005794	GO:0005794	Golgi apparatus	3.615e-02	0.000e+00	2.520e+00	3.020e-03
+GO:0043292	GO:0043292	contractile fiber	3.713e-02	0.000e+00	4.624e+00	2.375e-05
+GO:0030018	GO:0030018	Z disc	3.822e-02	0.000e+00	4.210e+00	6.171e-05

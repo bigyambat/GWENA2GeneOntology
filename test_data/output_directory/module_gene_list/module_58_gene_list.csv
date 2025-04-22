@@ -1,2 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-58	True	0.0392907593785674	946	36	9	0.25	0.00951374207188161	GO:0045321	GO:BP	leukocyte activation	21031	11749	GO:0001775, GO:0002376

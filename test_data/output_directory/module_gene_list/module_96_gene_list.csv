@@ -1,6 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-96	True	0.00178760411939054	2	23	2	0.0869565217391304	1.0	GO:0001507	GO:BP	acetylcholine catabolic process in synaptic cleft	21031	327	GO:0006581, GO:0007271
-96	True	0.00535924208031655	3	23	2	0.0869565217391304	0.666666666666667	GO:0006581	GO:BP	acetylcholine catabolic process	21031	2327	GO:0008291, GO:1901575
-96	True	0.0374149049296386	7	23	2	0.0869565217391304	0.285714285714286	GO:0008291	GO:BP	acetylcholine metabolic process	21031	3189	GO:0006807, GO:1900619
-96	True	0.0374149049296386	7	23	2	0.0869565217391304	0.285714285714286	GO:1900619	GO:BP	acetate ester metabolic process	21031	21302	GO:0071704
-96	True	0.0223754120328521	80	26	3	0.115384615384615	0.0375	GO:0031594	GO:CC	neuromuscular junction	22097	1169	GO:0045202

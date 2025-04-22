@@ -1,2 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-100	True	0.044264163906532	176	21	4	0.19047619047619	0.0227272727272727	MIRNA:hsa-miR-6083	MIRNA	hsa-miR-6083	14819	1909	MIRNA:000000

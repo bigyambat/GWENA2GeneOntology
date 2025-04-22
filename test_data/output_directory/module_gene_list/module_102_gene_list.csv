@@ -1,3 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-102	True	0.0459048079007781	24	17	2	0.117647058823529	0.0833333333333333	GO:0016895	GO:MF	DNA exonuclease activity, producing 5'-phosphomonoesters	20212	3067	GO:0004529, GO:0016796
-102	True	0.0498718548362101	25	17	2	0.117647058823529	0.08	GO:0004529	GO:MF	DNA exonuclease activity	20212	862	GO:0004527, GO:0004536

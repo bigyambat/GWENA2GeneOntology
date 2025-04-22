@@ -1,2 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-21	True	0.00521218403143515	56	29	4	0.137931034482759	0.0714285714285714	WP:WP2374	WP	Oncostatin M signaling pathway	8286	108	WP:000000

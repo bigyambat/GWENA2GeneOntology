@@ -1,0 +1,2 @@
+dotCount	x	y	frequency	colour	size	pval	description	legend	members	representative	user
+1	0.0	0.0	0.9600458151990988	-1.4409988846935604	0.6931471805599453	0.0362243928689784	DNA topoisomerase activity	1. DNA topoisomerase activity	['GO:0003916']	GO:0003916	0

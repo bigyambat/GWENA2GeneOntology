@@ -1,3 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-38	True	0.0464015485560672	27	44	3	0.0681818181818182	0.111111111111111	GO:0002053	GO:BP	positive regulation of mesenchymal cell proliferation	21031	659	GO:0008284, GO:0010463, GO:0010464
-38	True	0.0132815141009969	65	40	4	0.1	0.0615384615384615	MIRNA:hsa-miR-6861-5p	MIRNA	hsa-miR-6861-5p	14819	2343	MIRNA:000000

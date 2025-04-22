@@ -1,2 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-32	True	0.0398397850437422	210	26	5	0.192307692307692	0.0238095238095238	REAC:R-HSA-1483257	REAC	Phospholipid metabolism	10842	1698	REAC:R-HSA-556833

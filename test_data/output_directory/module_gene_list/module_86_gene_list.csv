@@ -1,3 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-86	True	0.028634914544247	16	25	2	0.08	0.125	GO:0035102	GO:CC	PRC1 complex	22097	1594	GO:0000152, GO:0031519
-86	True	0.00442971590289145	143	6	3	0.5	0.020979020979021	KEGG:04550	KEGG	Signaling pathways regulating pluripotency of stem cells	8484	319	KEGG:00000

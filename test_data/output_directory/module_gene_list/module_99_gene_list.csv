@@ -1,2 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-99	True	0.0314399091628836	12	25	2	0.08	0.166666666666667	GO:0035251	GO:MF	UDP-glucosyltransferase activity	20212	5287	GO:0008194, GO:0046527

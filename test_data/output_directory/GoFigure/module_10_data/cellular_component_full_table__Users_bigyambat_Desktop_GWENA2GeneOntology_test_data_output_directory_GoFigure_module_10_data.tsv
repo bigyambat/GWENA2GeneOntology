@@ -1,0 +1,5 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0005737	GO:0005737	cytoplasm	4.956e-07	0.000e+00	8.365e-01	1.457e-01
+GO:0012505	GO:0012505	endomembrane system	3.511e-05	0.000e+00	3.520e+00	3.021e-04
+GO:0062023	GO:0062023	collagen-containing extracellular matrix	2.376e-02	0.000e+00	3.565e+00	2.724e-04
+GO:0005829	GO:0005829	cytosol	3.758e-02	0.000e+00	2.561e+00	2.749e-03

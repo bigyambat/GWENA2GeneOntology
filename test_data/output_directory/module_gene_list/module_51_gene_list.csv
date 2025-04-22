@@ -1,5 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-51	True	0.00716210843763437	3	11	2	0.181818181818182	0.666666666666667	CORUM:5659	CORUM	SEMA3C-PlexinD1-Nrp1 complex	3383	1762	CORUM:0000000
-51	True	0.0111655516591815	143	39	5	0.128205128205128	0.034965034965035	GO:0010977	GO:BP	negative regulation of neuron projection development	21031	4611	GO:0010975, GO:0031175, GO:0031345
-51	True	0.034582221066442	4	39	2	0.0512820512820513	0.5	GO:0060666	GO:BP	dichotomous subdivision of terminal units involved in salivary gland branching	21031	15314	GO:0060445, GO:0060600
-51	True	0.0464410303841509	192	39	5	0.128205128205128	0.0260416666666667	GO:0031345	GO:BP	negative regulation of cell projection organization	21031	7393	GO:0030030, GO:0031344, GO:0051129

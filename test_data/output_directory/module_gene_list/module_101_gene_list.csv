@@ -1,2 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-101	True	0.0499879862206434	1	3	1	0.333333333333333	1.0	CORUM:2074	CORUM	TRAF6 homo-oligomer complex	3383	901	CORUM:0000000

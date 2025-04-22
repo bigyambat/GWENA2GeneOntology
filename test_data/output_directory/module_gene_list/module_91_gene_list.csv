@@ -1,2 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-91	True	0.0378776471419609	225	23	4	0.173913043478261	0.0177777777777778	GO:0016747	GO:MF	acyltransferase activity, transferring groups other than amino-acyl groups	20212	2945	GO:0016746

@@ -1,2 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-26	True	0.00703767899197608	3	29	2	0.0689655172413793	0.666666666666667	REAC:R-HSA-8981607	REAC	Intracellular oxygen transport	10842	1231	REAC:R-HSA-382551

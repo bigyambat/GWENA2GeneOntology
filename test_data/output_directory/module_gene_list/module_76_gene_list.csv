@@ -1,3 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-76	True	0.0402000968267318	1405	27	8	0.296296296296296	0.00569395017793594	GO:0015630	GO:CC	microtubule cytoskeleton	22097	708	GO:0005856
-76	True	0.00609381726414738	389	29	6	0.206896551724138	0.0154241645244216	GO:0015631	GO:MF	tubulin binding	20212	2658	GO:0008092

@@ -1,2 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-36	True	0.0311016432960173	8	49	2	0.0408163265306122	0.25	GO:0032541	GO:CC	cortical endoplasmic reticulum	22097	1309	GO:0005938, GO:0071782

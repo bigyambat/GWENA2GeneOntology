@@ -1,2 +1,0 @@
-query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
-27	True	0.0270173016843776	10745	55	45	0.818181818181818	0.00418799441600745	TF:M00695	TF	Factor: ETF; motif: GVGGMGG	20045	2202	TF:M00000
