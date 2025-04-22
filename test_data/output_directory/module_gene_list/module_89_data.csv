@@ -1,0 +1,4 @@
+query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
+89	True	0.0496799370058398	1	4	1	0.25	1.0	CORUM:2578	CORUM	Sam68-p120GAP complex	3383	1091	CORUM:0000000
+89	True	0.00195461369125745	1333	12	8	0.666666666666667	0.00600150037509377	HPA:0170053	HPA	endometrium 2; glandular cells[High]	11019	319	HPA:0170052
+89	True	0.0452492702898837	2038	12	8	0.666666666666667	0.00392541707556428	HPA:0610833	HPA	urinary bladder; urothelial cells[High]	11019	855	HPA:0610832

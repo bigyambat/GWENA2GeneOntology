@@ -1,0 +1,3 @@
+query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
+24	True	0.0163825836012771	2	18	2	0.111111111111111	1.0	HP:0040176	HP	Abnormal circulating phospholipid concentration	4958	15156	HP:0003119
+24	True	0.032588854458046	4634	39	28	0.717948717948718	0.00604229607250755	HPA:0100201	HPA	cerebral cortex; endothelial cells[≥Low]	11019	183	HPA:0100000

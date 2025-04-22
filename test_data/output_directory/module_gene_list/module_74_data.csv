@@ -1,0 +1,2 @@
+query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
+74	True	0.0124037977552994	70	11	4	0.363636363636364	0.0571428571428571	HP:0002583	HP	Colitis	4958	1866	HP:0002037

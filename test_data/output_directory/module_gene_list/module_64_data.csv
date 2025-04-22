@@ -1,0 +1,2 @@
+query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
+64	True	0.0460740521984268	356	34	5	0.147058823529412	0.0140449438202247	GO:0031253	GO:CC	cell projection membrane	22097	1075	GO:0098590, GO:0120025

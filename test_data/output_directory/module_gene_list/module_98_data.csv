@@ -1,0 +1,3 @@
+query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
+98	True	0.00933698807314158	24	9	3	0.333333333333333	0.125	HP:0100337	HP	Bilateral cleft palate	4958	15873	HP:0100338
+98	True	0.0150576858822146	28	9	3	0.333333333333333	0.107142857142857	HP:0100338	HP	Non-midline cleft palate	4958	15874	HP:0000175

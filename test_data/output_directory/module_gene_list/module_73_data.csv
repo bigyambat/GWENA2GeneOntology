@@ -1,0 +1,2 @@
+query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
+73	True	0.0480313369591317	48	8	3	0.375	0.0625	HP:0009062	HP	Infantile axial hypotonia	4958	5634	HP:0008936, HP:0008947

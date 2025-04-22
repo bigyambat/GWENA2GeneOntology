@@ -1,0 +1,2 @@
+query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
+59	True	0.040903592798673	10	23	2	0.0869565217391304	0.2	WP:WP4846	WP	SARS CoV 2 and COVID 19 pathway	8286	542	WP:000000

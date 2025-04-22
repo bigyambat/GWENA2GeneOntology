@@ -1,0 +1,2 @@
+query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
+90	True	0.00165615534428729	3	26	2	0.0769230769230769	0.666666666666667	GO:0070735	GO:MF	protein-glycine ligase activity	20212	8711	GO:0016881, GO:0140096

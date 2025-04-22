@@ -1,0 +1,2 @@
+query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
+23	True	0.043138628399119	12345	58	46	0.793103448275862	0.00372620494127177	GO:0005737	GO:CC	cytoplasm	22097	309	GO:0005622, GO:0110165

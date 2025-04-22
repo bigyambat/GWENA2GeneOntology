@@ -1,0 +1,2 @@
+query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
+39	True	0.0495422588077971	7	45	2	0.0444444444444444	0.285714285714286	GO:0004128	GO:MF	cytochrome-b5 reductase activity, acting on NAD(P)H	20212	613	GO:0016653

@@ -1,0 +1,2 @@
+query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
+0	True	0.00512377100286856	17	2	2	1.0	0.117647058823529	HP:0040196	HP	Mild microcephaly	4958	15174	HP:0040195

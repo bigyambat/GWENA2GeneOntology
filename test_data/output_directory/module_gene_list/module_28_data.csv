@@ -1,0 +1,5 @@
+query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
+28	True	0.0307682898558564	2430	48	15	0.3125	0.00617283950617284	GO:0005856	GO:CC	cytoskeleton	22097	399	GO:0043232
+28	True	0.00855426612050931	3	50	2	0.04	0.666666666666667	GO:1990518	GO:MF	single-stranded 3'-5' DNA helicase activity	20212	11107	GO:0017116, GO:0043138
+28	True	0.0358448893305915	33	31	3	0.0967741935483871	0.0909090909090909	REAC:R-HSA-68962	REAC	Activation of the pre-replicative complex	10842	104	REAC:R-HSA-69002, REAC:R-HSA-69206
+28	True	0.0249838018313967	42	23	3	0.130434782608696	0.0714285714285714	WP:WP466	WP	DNA replication	8286	485	WP:000000
