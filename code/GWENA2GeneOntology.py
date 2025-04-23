@@ -6,6 +6,15 @@
 # conda activate gwenav2
 # conda install -c conda-forge matplotlib=3.7.1
 
+# Ensure docker desktop is installed 
+
+# Download the Metascape for Bioinformaticians (MSBio) as a Docker tool using the following link:
+# https://metascape.org/gp/index.html#/menu/msbio
+
+# Agree to all terms and download msbio2 version
+
+# Follow instructions to unzip and run the MSBio docker image
+
 # Obtain a free license for metascape at  https://metascape.org/msbio.html
 
 # pip install pandas numpy docker openpyxl adjustText scikit-learn seaborn
@@ -14,7 +23,7 @@
 # python GWENA2GeneOntology.py --gwena_enrichment_file /path/to/gwena_enrichment_file.xlsx --output_directory /path/to/output_directory --metascape_download_location /path/to/metascape_download_location --gene_list_excel /path/to/gene_list_file.xlsx
 
 # Test Run
-# /Users/bigyambat/miniforge3/envs/gwenav2/bin/python3 /Users/bigyambat/Desktop/GWENA2GeneOntology/code/GWENA2GeneOntology.py --gwena_enrichment_file /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/Enrichment_Complete.xlsx --output_directory /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory --metascape_download_location /Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20240901 --gene_list_excel /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/Module_Genes_Post_Filtering.xlsx
+# /Users/bigyambat/miniforge3/envs/gwenav2/bin/python3 /Users/bigyambat/Desktop/GWENA2GeneOntology/code/GWENA2GeneOntology.py --gwena_enrichment_file /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/Enrichment_Complete.xlsx --output_directory /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory --metascape_download_location /Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101 --gene_list_excel /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/Module_Genes_Post_Filtering.xlsx
 
 import pandas as pd
 import numpy as np
@@ -134,16 +143,19 @@ class GWENAAnalysis:
                 output_path.mkdir(parents=True, exist_ok=True)
 
                 gene_list_file = output_path / f"module_{sheet_name}_gene_list.txt"
-                df.iloc[:, 0].dropna().to_csv(gene_list_file, index=False, header=False)
+
+                df.iloc[:, [0]].dropna().to_csv(gene_list_file, index=False, header=["Gene"])
 
                 metascape_script = self.metascape_location / "bin" / "ms.sh"
 
-                command = ["docker", "run", "--rm",
-                 "--platform", "linux/amd64",
-                 "-v", str(license_path),  # mount license
-                str(metascape_script), "-u", "-o", str(output_path), str(gene_list_file)]
+                os.chdir(self.metascape_location)
 
-                logger.info(f"Running Metascape command: {' '.join(command)}")
+                command = [
+                    str(metascape_script),  # path to your shell script, e.g., /path/to/ms.sh
+                    "-u",
+                    "-o", str(output_path),
+                    str(gene_list_file)
+                ]
 
                 result = subprocess.run(command, capture_output=True, text=True)
                 logger.info("Metascape stdout:\n" + result.stdout)
@@ -166,7 +178,7 @@ class GWENAAnalysis:
 
         filtered = module_df[module_df['term_id'].astype(str).str.startswith("GO:")]
         go_terms_with_pval = filtered[['term_id', 'p_value']]
-        output_file = output_dir / f"module_{module_num}_gofigure.tsv"
+        output_file = output_dir / f"module_{module_num}_GO_Terms.tsv"
         go_terms_with_pval.to_csv(output_file, sep="\t", index=False, header=False)
         logger.info(f"Saved GoFigure input file to {output_file}")
         return output_file

@@ -1,9 +1,0 @@
-Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
-GO:0038091	GO:0038091	positive regulation of cell proliferation by VEGF-activated platelet derived growth factor receptor signaling pathway	1.456e-02	0.000e+00	6.223e+00	5.979e-07
-GO:0038091	GO:0038086	VEGF-activated platelet-derived growth factor receptor signaling pathway	1.456e-02	0.000e+00	6.223e+00	5.979e-07
-GO:0072277	GO:0072277	metanephric glomerular capillary formation	1.456e-02	0.000e+00	6.377e+00	4.199e-07
-GO:0072275	GO:0072275	metanephric glomerulus morphogenesis	1.456e-02	0.000e+00	7.997e+00	1.008e-08
-GO:0072276	GO:0072276	metanephric glomerulus vasculature morphogenesis	1.456e-02	0.000e+00	8.474e+00	3.359e-09
-GO:0072012	GO:0072012	glomerulus vasculature development	2.862e-02	0.000e+00	6.143e+00	7.188e-07
-GO:0072012	GO:0061437	renal system vasculature development	3.513e-02	0.000e+00	6.141e+00	7.222e-07
-GO:0072012	GO:0061440	kidney vasculature development	3.513e-02	0.000e+00	6.141e+00	7.222e-07

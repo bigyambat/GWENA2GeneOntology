@@ -723,3 +723,428 @@ WARNING: The requested image's platform (linux/amd64) does not match the detecte
 2025-04-22 14:08:09,748 - INFO - Found GoFigure script at /Users/bigyambat/miniforge3/pkgs/go-figure-1.0.2-hdfd78af_0/python-scripts/gofigure.py
 2025-04-22 14:08:11,693 - INFO - Completed GoFigure analysis for module_99_data.csv
 2025-04-22 14:08:11,693 - INFO - Analysis Completed
+2025-04-23 10:13:30,105 - INFO - Starting GWENA2GeneOntology Analysis
+2025-04-23 10:13:30,105 - INFO - Input file: /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/Enrichment_Complete.xlsx
+2025-04-23 10:13:30,105 - INFO - Output directory: /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory
+2025-04-23 10:13:30,105 - INFO - Metascape location: /Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101
+2025-04-23 10:13:30,105 - INFO - Gene list Excel file: /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/Module_Genes_Post_Filtering.xlsx
+2025-04-23 10:13:30,614 - INFO - Successfully loaded Excel file
+2025-04-23 10:13:30,614 - INFO - Sample of input data:
+2025-04-23 10:13:30,616 - INFO - 
+   query  significant       p_value  term_size  query_size  intersection_size  precision    recall     term_id source                                                term_name  effective_domain_size  source_order        parents
+0      0         True  5.123771e-03         17           2                  2   1.000000  0.117647  HP:0040196     HP                                        Mild microcephaly                   4958         15174     HP:0040195
+1      1         True  3.956905e-27         74        1269                 72   0.056738  0.972973   CORUM:306  CORUM                                    Ribosome, cytoplasmic                   3383           183  CORUM:0000000
+2      1         True  1.833596e-17         43        1269                 43   0.033885  1.000000   CORUM:308  CORUM                       60S ribosomal subunit, cytoplasmic                   3383           184  CORUM:0000000
+3      1         True  1.219508e-13         93        1269                 72   0.056738  0.774194  CORUM:3055  CORUM                       Nop56p-associated pre-rRNA complex                   3383          1362  CORUM:0000000
+4      1         True  1.184810e-10         44        1269                 39   0.030733  0.886364   CORUM:178  CORUM  Respiratory chain complex I (holoenzyme), mitochondrial                   3383            90  CORUM:0000000
+2025-04-23 10:13:30,616 - INFO - Validating inputs...
+2025-04-23 10:13:30,616 - INFO - Input file confirmed: /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/Enrichment_Complete.xlsx
+2025-04-23 10:13:30,617 - INFO - Metascape location confirmed: /Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101
+2025-04-23 10:13:30,617 - INFO - Metascape script confirmed: /Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101/bin/ms.sh
+2025-04-23 10:13:30,617 - INFO - Output directory created/confirmed: /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory
+2025-04-23 10:13:30,617 - INFO - Creating module files using query values
+2025-04-23 10:13:30,618 - INFO - Saved module 0 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_0_data.csv
+2025-04-23 10:13:30,633 - INFO - Saved module 1 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_1_data.csv
+2025-04-23 10:13:30,635 - INFO - Saved module 10 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_10_data.csv
+2025-04-23 10:13:30,635 - INFO - Saved module 100 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_100_data.csv
+2025-04-23 10:13:30,636 - INFO - Saved module 101 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_101_data.csv
+2025-04-23 10:13:30,636 - INFO - Saved module 102 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_102_data.csv
+2025-04-23 10:13:30,637 - INFO - Saved module 103 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_103_data.csv
+2025-04-23 10:13:30,639 - INFO - Saved module 11 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_11_data.csv
+2025-04-23 10:13:30,640 - INFO - Saved module 12 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_12_data.csv
+2025-04-23 10:13:30,640 - INFO - Saved module 13 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_13_data.csv
+2025-04-23 10:13:30,641 - INFO - Saved module 14 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_14_data.csv
+2025-04-23 10:13:30,641 - INFO - Saved module 15 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_15_data.csv
+2025-04-23 10:13:30,642 - INFO - Saved module 16 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_16_data.csv
+2025-04-23 10:13:30,642 - INFO - Saved module 17 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_17_data.csv
+2025-04-23 10:13:30,643 - INFO - Saved module 18 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_18_data.csv
+2025-04-23 10:13:30,643 - INFO - Saved module 19 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_19_data.csv
+2025-04-23 10:13:30,647 - INFO - Saved module 2 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_2_data.csv
+2025-04-23 10:13:30,648 - INFO - Saved module 20 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_20_data.csv
+2025-04-23 10:13:30,649 - INFO - Saved module 21 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_21_data.csv
+2025-04-23 10:13:30,650 - INFO - Saved module 22 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_22_data.csv
+2025-04-23 10:13:30,650 - INFO - Saved module 23 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_23_data.csv
+2025-04-23 10:13:30,651 - INFO - Saved module 24 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_24_data.csv
+2025-04-23 10:13:30,652 - INFO - Saved module 25 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_25_data.csv
+2025-04-23 10:13:30,652 - INFO - Saved module 26 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_26_data.csv
+2025-04-23 10:13:30,653 - INFO - Saved module 27 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_27_data.csv
+2025-04-23 10:13:30,654 - INFO - Saved module 28 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_28_data.csv
+2025-04-23 10:13:30,654 - INFO - Saved module 29 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_29_data.csv
+2025-04-23 10:13:30,658 - INFO - Saved module 3 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_3_data.csv
+2025-04-23 10:13:30,659 - INFO - Saved module 30 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_30_data.csv
+2025-04-23 10:13:30,659 - INFO - Saved module 31 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_31_data.csv
+2025-04-23 10:13:30,660 - INFO - Saved module 32 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_32_data.csv
+2025-04-23 10:13:30,660 - INFO - Saved module 34 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_34_data.csv
+2025-04-23 10:13:30,661 - INFO - Saved module 36 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_36_data.csv
+2025-04-23 10:13:30,661 - INFO - Saved module 38 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_38_data.csv
+2025-04-23 10:13:30,662 - INFO - Saved module 39 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_39_data.csv
+2025-04-23 10:13:30,664 - INFO - Saved module 4 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_4_data.csv
+2025-04-23 10:13:30,665 - INFO - Saved module 41 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_41_data.csv
+2025-04-23 10:13:30,666 - INFO - Saved module 42 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_42_data.csv
+2025-04-23 10:13:30,667 - INFO - Saved module 43 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_43_data.csv
+2025-04-23 10:13:30,667 - INFO - Saved module 44 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_44_data.csv
+2025-04-23 10:13:30,668 - INFO - Saved module 46 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_46_data.csv
+2025-04-23 10:13:30,668 - INFO - Saved module 48 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_48_data.csv
+2025-04-23 10:13:30,670 - INFO - Saved module 5 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_5_data.csv
+2025-04-23 10:13:30,672 - INFO - Saved module 51 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_51_data.csv
+2025-04-23 10:13:30,673 - INFO - Saved module 52 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_52_data.csv
+2025-04-23 10:13:30,674 - INFO - Saved module 53 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_53_data.csv
+2025-04-23 10:13:30,674 - INFO - Saved module 54 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_54_data.csv
+2025-04-23 10:13:30,675 - INFO - Saved module 55 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_55_data.csv
+2025-04-23 10:13:30,675 - INFO - Saved module 56 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_56_data.csv
+2025-04-23 10:13:30,676 - INFO - Saved module 58 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_58_data.csv
+2025-04-23 10:13:30,676 - INFO - Saved module 59 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_59_data.csv
+2025-04-23 10:13:30,678 - INFO - Saved module 6 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_6_data.csv
+2025-04-23 10:13:30,678 - INFO - Saved module 61 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_61_data.csv
+2025-04-23 10:13:30,679 - INFO - Saved module 62 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_62_data.csv
+2025-04-23 10:13:30,680 - INFO - Saved module 63 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_63_data.csv
+2025-04-23 10:13:30,680 - INFO - Saved module 64 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_64_data.csv
+2025-04-23 10:13:30,681 - INFO - Saved module 66 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_66_data.csv
+2025-04-23 10:13:30,681 - INFO - Saved module 67 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_67_data.csv
+2025-04-23 10:13:30,682 - INFO - Saved module 68 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_68_data.csv
+2025-04-23 10:13:30,683 - INFO - Saved module 7 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_7_data.csv
+2025-04-23 10:13:30,684 - INFO - Saved module 71 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_71_data.csv
+2025-04-23 10:13:30,685 - INFO - Saved module 72 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_72_data.csv
+2025-04-23 10:13:30,685 - INFO - Saved module 73 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_73_data.csv
+2025-04-23 10:13:30,686 - INFO - Saved module 74 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_74_data.csv
+2025-04-23 10:13:30,687 - INFO - Saved module 75 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_75_data.csv
+2025-04-23 10:13:30,687 - INFO - Saved module 76 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_76_data.csv
+2025-04-23 10:13:30,688 - INFO - Saved module 77 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_77_data.csv
+2025-04-23 10:13:30,688 - INFO - Saved module 78 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_78_data.csv
+2025-04-23 10:13:30,689 - INFO - Saved module 8 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_8_data.csv
+2025-04-23 10:13:30,689 - INFO - Saved module 81 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_81_data.csv
+2025-04-23 10:13:30,690 - INFO - Saved module 82 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_82_data.csv
+2025-04-23 10:13:30,690 - INFO - Saved module 83 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_83_data.csv
+2025-04-23 10:13:30,691 - INFO - Saved module 86 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_86_data.csv
+2025-04-23 10:13:30,691 - INFO - Saved module 87 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_87_data.csv
+2025-04-23 10:13:30,691 - INFO - Saved module 88 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_88_data.csv
+2025-04-23 10:13:30,692 - INFO - Saved module 89 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_89_data.csv
+2025-04-23 10:13:30,693 - INFO - Saved module 9 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_9_data.csv
+2025-04-23 10:13:30,693 - INFO - Saved module 90 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_90_data.csv
+2025-04-23 10:13:30,694 - INFO - Saved module 91 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_91_data.csv
+2025-04-23 10:13:30,694 - INFO - Saved module 92 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_92_data.csv
+2025-04-23 10:13:30,695 - INFO - Saved module 93 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_93_data.csv
+2025-04-23 10:13:30,695 - INFO - Saved module 95 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_95_data.csv
+2025-04-23 10:13:30,696 - INFO - Saved module 96 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_96_data.csv
+2025-04-23 10:13:30,696 - INFO - Saved module 98 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_98_data.csv
+2025-04-23 10:13:30,697 - INFO - Saved module 99 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_99_data.csv
+2025-04-23 10:13:30,697 - INFO - Running Metascape using gene list Excel file: /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/Module_Genes_Post_Filtering.xlsx
+2025-04-23 10:13:30,731 - ERROR - Failed to run Metascape from Excel: "None of [Index(['Gene'], dtype='object')] are in the [columns]"
+2025-04-23 10:13:30,731 - ERROR - Metascape analysis failed: "None of [Index(['Gene'], dtype='object')] are in the [columns]"
+2025-04-23 10:19:37,415 - INFO - Starting GWENA2GeneOntology Analysis
+2025-04-23 10:19:37,415 - INFO - Input file: /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/Enrichment_Complete.xlsx
+2025-04-23 10:19:37,415 - INFO - Output directory: /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory
+2025-04-23 10:19:37,415 - INFO - Metascape location: /Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101
+2025-04-23 10:19:37,415 - INFO - Gene list Excel file: /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/Module_Genes_Post_Filtering.xlsx
+2025-04-23 10:19:37,886 - INFO - Successfully loaded Excel file
+2025-04-23 10:19:37,886 - INFO - Sample of input data:
+2025-04-23 10:19:37,889 - INFO - 
+   query  significant       p_value  term_size  query_size  intersection_size  precision    recall     term_id source                                                term_name  effective_domain_size  source_order        parents
+0      0         True  5.123771e-03         17           2                  2   1.000000  0.117647  HP:0040196     HP                                        Mild microcephaly                   4958         15174     HP:0040195
+1      1         True  3.956905e-27         74        1269                 72   0.056738  0.972973   CORUM:306  CORUM                                    Ribosome, cytoplasmic                   3383           183  CORUM:0000000
+2      1         True  1.833596e-17         43        1269                 43   0.033885  1.000000   CORUM:308  CORUM                       60S ribosomal subunit, cytoplasmic                   3383           184  CORUM:0000000
+3      1         True  1.219508e-13         93        1269                 72   0.056738  0.774194  CORUM:3055  CORUM                       Nop56p-associated pre-rRNA complex                   3383          1362  CORUM:0000000
+4      1         True  1.184810e-10         44        1269                 39   0.030733  0.886364   CORUM:178  CORUM  Respiratory chain complex I (holoenzyme), mitochondrial                   3383            90  CORUM:0000000
+2025-04-23 10:19:37,889 - INFO - Validating inputs...
+2025-04-23 10:19:37,889 - INFO - Input file confirmed: /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/Enrichment_Complete.xlsx
+2025-04-23 10:19:37,890 - INFO - Metascape location confirmed: /Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101
+2025-04-23 10:19:37,890 - INFO - Metascape script confirmed: /Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101/bin/ms.sh
+2025-04-23 10:19:37,890 - INFO - Output directory created/confirmed: /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory
+2025-04-23 10:19:37,890 - INFO - Creating module files using query values
+2025-04-23 10:19:37,893 - INFO - Saved module 0 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_0_data.csv
+2025-04-23 10:19:37,908 - INFO - Saved module 1 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_1_data.csv
+2025-04-23 10:19:37,910 - INFO - Saved module 10 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_10_data.csv
+2025-04-23 10:19:37,910 - INFO - Saved module 100 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_100_data.csv
+2025-04-23 10:19:37,911 - INFO - Saved module 101 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_101_data.csv
+2025-04-23 10:19:37,912 - INFO - Saved module 102 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_102_data.csv
+2025-04-23 10:19:37,912 - INFO - Saved module 103 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_103_data.csv
+2025-04-23 10:19:37,914 - INFO - Saved module 11 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_11_data.csv
+2025-04-23 10:19:37,915 - INFO - Saved module 12 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_12_data.csv
+2025-04-23 10:19:37,915 - INFO - Saved module 13 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_13_data.csv
+2025-04-23 10:19:37,916 - INFO - Saved module 14 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_14_data.csv
+2025-04-23 10:19:37,916 - INFO - Saved module 15 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_15_data.csv
+2025-04-23 10:19:37,916 - INFO - Saved module 16 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_16_data.csv
+2025-04-23 10:19:37,917 - INFO - Saved module 17 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_17_data.csv
+2025-04-23 10:19:37,917 - INFO - Saved module 18 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_18_data.csv
+2025-04-23 10:19:37,918 - INFO - Saved module 19 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_19_data.csv
+2025-04-23 10:19:37,922 - INFO - Saved module 2 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_2_data.csv
+2025-04-23 10:19:37,922 - INFO - Saved module 20 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_20_data.csv
+2025-04-23 10:19:37,923 - INFO - Saved module 21 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_21_data.csv
+2025-04-23 10:19:37,924 - INFO - Saved module 22 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_22_data.csv
+2025-04-23 10:19:37,924 - INFO - Saved module 23 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_23_data.csv
+2025-04-23 10:19:37,925 - INFO - Saved module 24 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_24_data.csv
+2025-04-23 10:19:37,925 - INFO - Saved module 25 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_25_data.csv
+2025-04-23 10:19:37,926 - INFO - Saved module 26 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_26_data.csv
+2025-04-23 10:19:37,926 - INFO - Saved module 27 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_27_data.csv
+2025-04-23 10:19:37,926 - INFO - Saved module 28 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_28_data.csv
+2025-04-23 10:19:37,927 - INFO - Saved module 29 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_29_data.csv
+2025-04-23 10:19:37,931 - INFO - Saved module 3 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_3_data.csv
+2025-04-23 10:19:37,932 - INFO - Saved module 30 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_30_data.csv
+2025-04-23 10:19:37,932 - INFO - Saved module 31 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_31_data.csv
+2025-04-23 10:19:37,933 - INFO - Saved module 32 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_32_data.csv
+2025-04-23 10:19:37,934 - INFO - Saved module 34 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_34_data.csv
+2025-04-23 10:19:37,934 - INFO - Saved module 36 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_36_data.csv
+2025-04-23 10:19:37,934 - INFO - Saved module 38 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_38_data.csv
+2025-04-23 10:19:37,935 - INFO - Saved module 39 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_39_data.csv
+2025-04-23 10:19:37,937 - INFO - Saved module 4 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_4_data.csv
+2025-04-23 10:19:37,938 - INFO - Saved module 41 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_41_data.csv
+2025-04-23 10:19:37,938 - INFO - Saved module 42 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_42_data.csv
+2025-04-23 10:19:37,939 - INFO - Saved module 43 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_43_data.csv
+2025-04-23 10:19:37,939 - INFO - Saved module 44 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_44_data.csv
+2025-04-23 10:19:37,940 - INFO - Saved module 46 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_46_data.csv
+2025-04-23 10:19:37,941 - INFO - Saved module 48 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_48_data.csv
+2025-04-23 10:19:37,943 - INFO - Saved module 5 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_5_data.csv
+2025-04-23 10:19:37,944 - INFO - Saved module 51 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_51_data.csv
+2025-04-23 10:19:37,945 - INFO - Saved module 52 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_52_data.csv
+2025-04-23 10:19:37,946 - INFO - Saved module 53 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_53_data.csv
+2025-04-23 10:19:37,946 - INFO - Saved module 54 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_54_data.csv
+2025-04-23 10:19:37,947 - INFO - Saved module 55 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_55_data.csv
+2025-04-23 10:19:37,947 - INFO - Saved module 56 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_56_data.csv
+2025-04-23 10:19:37,948 - INFO - Saved module 58 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_58_data.csv
+2025-04-23 10:19:37,948 - INFO - Saved module 59 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_59_data.csv
+2025-04-23 10:19:37,950 - INFO - Saved module 6 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_6_data.csv
+2025-04-23 10:19:37,950 - INFO - Saved module 61 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_61_data.csv
+2025-04-23 10:19:37,951 - INFO - Saved module 62 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_62_data.csv
+2025-04-23 10:19:37,952 - INFO - Saved module 63 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_63_data.csv
+2025-04-23 10:19:37,952 - INFO - Saved module 64 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_64_data.csv
+2025-04-23 10:19:37,953 - INFO - Saved module 66 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_66_data.csv
+2025-04-23 10:19:37,954 - INFO - Saved module 67 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_67_data.csv
+2025-04-23 10:19:37,954 - INFO - Saved module 68 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_68_data.csv
+2025-04-23 10:19:37,955 - INFO - Saved module 7 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_7_data.csv
+2025-04-23 10:19:37,956 - INFO - Saved module 71 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_71_data.csv
+2025-04-23 10:19:37,957 - INFO - Saved module 72 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_72_data.csv
+2025-04-23 10:19:37,957 - INFO - Saved module 73 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_73_data.csv
+2025-04-23 10:19:37,960 - INFO - Saved module 74 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_74_data.csv
+2025-04-23 10:19:37,960 - INFO - Saved module 75 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_75_data.csv
+2025-04-23 10:19:37,960 - INFO - Saved module 76 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_76_data.csv
+2025-04-23 10:19:37,961 - INFO - Saved module 77 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_77_data.csv
+2025-04-23 10:19:37,961 - INFO - Saved module 78 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_78_data.csv
+2025-04-23 10:19:37,962 - INFO - Saved module 8 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_8_data.csv
+2025-04-23 10:19:37,963 - INFO - Saved module 81 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_81_data.csv
+2025-04-23 10:19:37,963 - INFO - Saved module 82 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_82_data.csv
+2025-04-23 10:19:37,964 - INFO - Saved module 83 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_83_data.csv
+2025-04-23 10:19:37,965 - INFO - Saved module 86 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_86_data.csv
+2025-04-23 10:19:37,966 - INFO - Saved module 87 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_87_data.csv
+2025-04-23 10:19:37,966 - INFO - Saved module 88 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_88_data.csv
+2025-04-23 10:19:37,967 - INFO - Saved module 89 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_89_data.csv
+2025-04-23 10:19:37,968 - INFO - Saved module 9 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_9_data.csv
+2025-04-23 10:19:37,968 - INFO - Saved module 90 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_90_data.csv
+2025-04-23 10:19:37,969 - INFO - Saved module 91 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_91_data.csv
+2025-04-23 10:19:37,969 - INFO - Saved module 92 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_92_data.csv
+2025-04-23 10:19:37,969 - INFO - Saved module 93 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_93_data.csv
+2025-04-23 10:19:37,970 - INFO - Saved module 95 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_95_data.csv
+2025-04-23 10:19:37,971 - INFO - Saved module 96 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_96_data.csv
+2025-04-23 10:19:37,971 - INFO - Saved module 98 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_98_data.csv
+2025-04-23 10:19:37,972 - INFO - Saved module 99 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_99_data.csv
+2025-04-23 10:19:37,972 - INFO - Running Metascape using gene list Excel file: /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/Module_Genes_Post_Filtering.xlsx
+2025-04-23 10:19:38,020 - INFO - Running Metascape command: docker run --rm--platform linux/amd64 -v /Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101/license/license.txt /Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101/bin/ms.sh -u -o /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/metascape_output/module_1 /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/metascape_output/module_1/module_1_gene_list.txt
+2025-04-23 10:19:39,021 - INFO - Metascape stdout:
+
+2025-04-23 10:19:39,021 - INFO - Metascape stderr:
+unknown flag: --rm--platform
+See 'docker run --help'.
+
+2025-04-23 10:19:39,021 - ERROR - Metascape Error for module 1: unknown flag: --rm--platform
+See 'docker run --help'.
+
+2025-04-23 10:19:39,024 - INFO - Running Metascape command: docker run --rm--platform linux/amd64 -v /Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101/license/license.txt /Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101/bin/ms.sh -u -o /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/metascape_output/module_2 /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/metascape_output/module_2/module_2_gene_list.txt
+2025-04-23 10:19:39,097 - INFO - Metascape stdout:
+
+2025-04-23 10:19:39,098 - INFO - Metascape stderr:
+unknown flag: --rm--platform
+See 'docker run --help'.
+
+2025-04-23 10:19:39,098 - ERROR - Metascape Error for module 2: unknown flag: --rm--platform
+See 'docker run --help'.
+
+2025-04-23 10:19:39,098 - INFO - Processing 85 module files for GO analysis
+2025-04-23 10:19:39,098 - INFO - Running GoFigure analysis for module_0_data.csv
+2025-04-23 10:19:39,100 - INFO - Creating GoFigure input for module 0
+2025-04-23 10:19:39,101 - INFO - Saved GoFigure input file to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/GoFigure/module_0_data/module_0_GO_Terms.tsv
+2025-04-23 10:19:39,102 - INFO - Found GoFigure script at /Users/bigyambat/miniforge3/pkgs/go-figure-1.0.2-hdfd78af_0/python-scripts/gofigure.py
+2025-04-23 10:19:43,375 - INFO - Completed GoFigure analysis for module_0_data.csv
+2025-04-23 10:19:43,376 - INFO - Running GoFigure analysis for module_1_data.csv
+2025-04-23 10:19:43,383 - INFO - Creating GoFigure input for module 1
+2025-04-23 10:19:43,386 - INFO - Saved GoFigure input file to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/GoFigure/module_1_data/module_1_GO_Terms.tsv
+2025-04-23 10:19:43,386 - INFO - Found GoFigure script at /Users/bigyambat/miniforge3/pkgs/go-figure-1.0.2-hdfd78af_0/python-scripts/gofigure.py
+2025-04-23 10:19:46,918 - INFO - Completed GoFigure analysis for module_1_data.csv
+2025-04-23 10:19:46,918 - INFO - Running GoFigure analysis for module_10_data.csv
+2025-04-23 10:19:46,920 - INFO - Creating GoFigure input for module 10
+2025-04-23 10:19:46,921 - INFO - Saved GoFigure input file to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/GoFigure/module_10_data/module_10_GO_Terms.tsv
+2025-04-23 10:19:46,921 - INFO - Found GoFigure script at /Users/bigyambat/miniforge3/pkgs/go-figure-1.0.2-hdfd78af_0/python-scripts/gofigure.py
+2025-04-23 10:23:47,639 - INFO - Starting GWENA2GeneOntology Analysis
+2025-04-23 10:23:47,640 - INFO - Input file: /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/Enrichment_Complete.xlsx
+2025-04-23 10:23:47,640 - INFO - Output directory: /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory
+2025-04-23 10:23:47,640 - INFO - Metascape location: /Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101
+2025-04-23 10:23:47,640 - INFO - Gene list Excel file: /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/Module_Genes_Post_Filtering.xlsx
+2025-04-23 10:23:48,104 - INFO - Successfully loaded Excel file
+2025-04-23 10:23:48,104 - INFO - Sample of input data:
+2025-04-23 10:23:48,107 - INFO - 
+   query  significant       p_value  term_size  query_size  intersection_size  precision    recall     term_id source                                                term_name  effective_domain_size  source_order        parents
+0      0         True  5.123771e-03         17           2                  2   1.000000  0.117647  HP:0040196     HP                                        Mild microcephaly                   4958         15174     HP:0040195
+1      1         True  3.956905e-27         74        1269                 72   0.056738  0.972973   CORUM:306  CORUM                                    Ribosome, cytoplasmic                   3383           183  CORUM:0000000
+2      1         True  1.833596e-17         43        1269                 43   0.033885  1.000000   CORUM:308  CORUM                       60S ribosomal subunit, cytoplasmic                   3383           184  CORUM:0000000
+3      1         True  1.219508e-13         93        1269                 72   0.056738  0.774194  CORUM:3055  CORUM                       Nop56p-associated pre-rRNA complex                   3383          1362  CORUM:0000000
+4      1         True  1.184810e-10         44        1269                 39   0.030733  0.886364   CORUM:178  CORUM  Respiratory chain complex I (holoenzyme), mitochondrial                   3383            90  CORUM:0000000
+2025-04-23 10:23:48,107 - INFO - Validating inputs...
+2025-04-23 10:23:48,107 - INFO - Input file confirmed: /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/Enrichment_Complete.xlsx
+2025-04-23 10:23:48,107 - INFO - Metascape location confirmed: /Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101
+2025-04-23 10:23:48,107 - INFO - Metascape script confirmed: /Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101/bin/ms.sh
+2025-04-23 10:23:48,108 - INFO - Output directory created/confirmed: /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory
+2025-04-23 10:23:48,108 - INFO - Creating module files using query values
+2025-04-23 10:23:48,110 - INFO - Saved module 0 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_0_data.csv
+2025-04-23 10:23:48,125 - INFO - Saved module 1 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_1_data.csv
+2025-04-23 10:23:48,126 - INFO - Saved module 10 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_10_data.csv
+2025-04-23 10:23:48,127 - INFO - Saved module 100 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_100_data.csv
+2025-04-23 10:23:48,128 - INFO - Saved module 101 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_101_data.csv
+2025-04-23 10:23:48,128 - INFO - Saved module 102 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_102_data.csv
+2025-04-23 10:23:48,129 - INFO - Saved module 103 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_103_data.csv
+2025-04-23 10:23:48,131 - INFO - Saved module 11 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_11_data.csv
+2025-04-23 10:23:48,131 - INFO - Saved module 12 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_12_data.csv
+2025-04-23 10:23:48,132 - INFO - Saved module 13 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_13_data.csv
+2025-04-23 10:23:48,132 - INFO - Saved module 14 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_14_data.csv
+2025-04-23 10:23:48,133 - INFO - Saved module 15 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_15_data.csv
+2025-04-23 10:23:48,133 - INFO - Saved module 16 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_16_data.csv
+2025-04-23 10:23:48,134 - INFO - Saved module 17 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_17_data.csv
+2025-04-23 10:23:48,134 - INFO - Saved module 18 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_18_data.csv
+2025-04-23 10:23:48,134 - INFO - Saved module 19 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_19_data.csv
+2025-04-23 10:23:48,138 - INFO - Saved module 2 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_2_data.csv
+2025-04-23 10:23:48,138 - INFO - Saved module 20 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_20_data.csv
+2025-04-23 10:23:48,139 - INFO - Saved module 21 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_21_data.csv
+2025-04-23 10:23:48,139 - INFO - Saved module 22 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_22_data.csv
+2025-04-23 10:23:48,140 - INFO - Saved module 23 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_23_data.csv
+2025-04-23 10:23:48,140 - INFO - Saved module 24 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_24_data.csv
+2025-04-23 10:23:48,140 - INFO - Saved module 25 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_25_data.csv
+2025-04-23 10:23:48,141 - INFO - Saved module 26 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_26_data.csv
+2025-04-23 10:23:48,141 - INFO - Saved module 27 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_27_data.csv
+2025-04-23 10:23:48,142 - INFO - Saved module 28 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_28_data.csv
+2025-04-23 10:23:48,142 - INFO - Saved module 29 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_29_data.csv
+2025-04-23 10:23:48,146 - INFO - Saved module 3 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_3_data.csv
+2025-04-23 10:23:48,148 - INFO - Saved module 30 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_30_data.csv
+2025-04-23 10:23:48,148 - INFO - Saved module 31 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_31_data.csv
+2025-04-23 10:23:48,149 - INFO - Saved module 32 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_32_data.csv
+2025-04-23 10:23:48,149 - INFO - Saved module 34 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_34_data.csv
+2025-04-23 10:23:48,150 - INFO - Saved module 36 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_36_data.csv
+2025-04-23 10:23:48,150 - INFO - Saved module 38 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_38_data.csv
+2025-04-23 10:23:48,150 - INFO - Saved module 39 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_39_data.csv
+2025-04-23 10:23:48,153 - INFO - Saved module 4 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_4_data.csv
+2025-04-23 10:23:48,154 - INFO - Saved module 41 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_41_data.csv
+2025-04-23 10:23:48,154 - INFO - Saved module 42 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_42_data.csv
+2025-04-23 10:23:48,154 - INFO - Saved module 43 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_43_data.csv
+2025-04-23 10:23:48,155 - INFO - Saved module 44 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_44_data.csv
+2025-04-23 10:23:48,155 - INFO - Saved module 46 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_46_data.csv
+2025-04-23 10:23:48,156 - INFO - Saved module 48 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_48_data.csv
+2025-04-23 10:23:48,157 - INFO - Saved module 5 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_5_data.csv
+2025-04-23 10:23:48,157 - INFO - Saved module 51 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_51_data.csv
+2025-04-23 10:23:48,158 - INFO - Saved module 52 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_52_data.csv
+2025-04-23 10:23:48,158 - INFO - Saved module 53 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_53_data.csv
+2025-04-23 10:23:48,159 - INFO - Saved module 54 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_54_data.csv
+2025-04-23 10:23:48,159 - INFO - Saved module 55 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_55_data.csv
+2025-04-23 10:23:48,159 - INFO - Saved module 56 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_56_data.csv
+2025-04-23 10:23:48,160 - INFO - Saved module 58 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_58_data.csv
+2025-04-23 10:23:48,160 - INFO - Saved module 59 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_59_data.csv
+2025-04-23 10:23:48,161 - INFO - Saved module 6 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_6_data.csv
+2025-04-23 10:23:48,162 - INFO - Saved module 61 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_61_data.csv
+2025-04-23 10:23:48,163 - INFO - Saved module 62 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_62_data.csv
+2025-04-23 10:23:48,163 - INFO - Saved module 63 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_63_data.csv
+2025-04-23 10:23:48,163 - INFO - Saved module 64 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_64_data.csv
+2025-04-23 10:23:48,164 - INFO - Saved module 66 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_66_data.csv
+2025-04-23 10:23:48,164 - INFO - Saved module 67 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_67_data.csv
+2025-04-23 10:23:48,165 - INFO - Saved module 68 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_68_data.csv
+2025-04-23 10:23:48,166 - INFO - Saved module 7 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_7_data.csv
+2025-04-23 10:23:48,167 - INFO - Saved module 71 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_71_data.csv
+2025-04-23 10:23:48,167 - INFO - Saved module 72 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_72_data.csv
+2025-04-23 10:23:48,167 - INFO - Saved module 73 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_73_data.csv
+2025-04-23 10:23:48,168 - INFO - Saved module 74 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_74_data.csv
+2025-04-23 10:23:48,168 - INFO - Saved module 75 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_75_data.csv
+2025-04-23 10:23:48,169 - INFO - Saved module 76 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_76_data.csv
+2025-04-23 10:23:48,169 - INFO - Saved module 77 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_77_data.csv
+2025-04-23 10:23:48,170 - INFO - Saved module 78 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_78_data.csv
+2025-04-23 10:23:48,171 - INFO - Saved module 8 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_8_data.csv
+2025-04-23 10:23:48,171 - INFO - Saved module 81 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_81_data.csv
+2025-04-23 10:23:48,172 - INFO - Saved module 82 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_82_data.csv
+2025-04-23 10:23:48,172 - INFO - Saved module 83 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_83_data.csv
+2025-04-23 10:23:48,172 - INFO - Saved module 86 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_86_data.csv
+2025-04-23 10:23:48,173 - INFO - Saved module 87 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_87_data.csv
+2025-04-23 10:23:48,173 - INFO - Saved module 88 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_88_data.csv
+2025-04-23 10:23:48,174 - INFO - Saved module 89 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_89_data.csv
+2025-04-23 10:23:48,175 - INFO - Saved module 9 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_9_data.csv
+2025-04-23 10:23:48,175 - INFO - Saved module 90 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_90_data.csv
+2025-04-23 10:23:48,175 - INFO - Saved module 91 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_91_data.csv
+2025-04-23 10:23:48,176 - INFO - Saved module 92 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_92_data.csv
+2025-04-23 10:23:48,176 - INFO - Saved module 93 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_93_data.csv
+2025-04-23 10:23:48,177 - INFO - Saved module 95 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_95_data.csv
+2025-04-23 10:23:48,177 - INFO - Saved module 96 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_96_data.csv
+2025-04-23 10:23:48,178 - INFO - Saved module 98 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_98_data.csv
+2025-04-23 10:23:48,179 - INFO - Saved module 99 data to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/module_gene_list/module_99_data.csv
+2025-04-23 10:23:48,179 - INFO - Running Metascape using gene list Excel file: /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/Module_Genes_Post_Filtering.xlsx
+2025-04-23 10:23:48,213 - INFO - Running Metascape command: docker run --rm --platform linux/amd64 -v /Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101/license/license.txt /Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101/bin/ms.sh -u -o /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/metascape_output/module_1 /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/metascape_output/module_1/module_1_gene_list.txt
+2025-04-23 10:23:48,231 - INFO - Metascape stdout:
+
+2025-04-23 10:23:48,232 - INFO - Metascape stderr:
+docker: invalid reference format: repository name (/Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101/bin/ms.sh) must be lowercase.
+See 'docker run --help'.
+
+2025-04-23 10:23:48,232 - ERROR - Metascape Error for module 1: docker: invalid reference format: repository name (/Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101/bin/ms.sh) must be lowercase.
+See 'docker run --help'.
+
+2025-04-23 10:23:48,234 - INFO - Running Metascape command: docker run --rm --platform linux/amd64 -v /Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101/license/license.txt /Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101/bin/ms.sh -u -o /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/metascape_output/module_2 /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/metascape_output/module_2/module_2_gene_list.txt
+2025-04-23 10:23:48,250 - INFO - Metascape stdout:
+
+2025-04-23 10:23:48,251 - INFO - Metascape stderr:
+docker: invalid reference format: repository name (/Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101/bin/ms.sh) must be lowercase.
+See 'docker run --help'.
+
+2025-04-23 10:23:48,251 - ERROR - Metascape Error for module 2: docker: invalid reference format: repository name (/Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101/bin/ms.sh) must be lowercase.
+See 'docker run --help'.
+
+2025-04-23 10:23:48,251 - INFO - Processing 85 module files for GO analysis
+2025-04-23 10:23:48,251 - INFO - Running GoFigure analysis for module_0_data.csv
+2025-04-23 10:23:48,253 - INFO - Creating GoFigure input for module 0
+2025-04-23 10:23:48,254 - INFO - Saved GoFigure input file to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/GoFigure/module_0_data/module_0_GO_Terms.tsv
+2025-04-23 10:23:48,255 - INFO - Found GoFigure script at /Users/bigyambat/miniforge3/pkgs/go-figure-1.0.2-hdfd78af_0/python-scripts/gofigure.py
+2025-04-23 10:23:50,208 - INFO - Completed GoFigure analysis for module_0_data.csv
+2025-04-23 10:23:50,209 - INFO - Running GoFigure analysis for module_1_data.csv
+2025-04-23 10:23:50,215 - INFO - Creating GoFigure input for module 1
+2025-04-23 10:23:50,218 - INFO - Saved GoFigure input file to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/GoFigure/module_1_data/module_1_GO_Terms.tsv
+2025-04-23 10:23:50,218 - INFO - Found GoFigure script at /Users/bigyambat/miniforge3/pkgs/go-figure-1.0.2-hdfd78af_0/python-scripts/gofigure.py
+2025-04-23 10:23:53,311 - INFO - Completed GoFigure analysis for module_1_data.csv
+2025-04-23 10:23:53,312 - INFO - Running GoFigure analysis for module_10_data.csv
+2025-04-23 10:23:53,314 - INFO - Creating GoFigure input for module 10
+2025-04-23 10:23:53,315 - INFO - Saved GoFigure input file to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/GoFigure/module_10_data/module_10_GO_Terms.tsv
+2025-04-23 10:23:53,315 - INFO - Found GoFigure script at /Users/bigyambat/miniforge3/pkgs/go-figure-1.0.2-hdfd78af_0/python-scripts/gofigure.py
+2025-04-23 10:23:55,716 - INFO - Completed GoFigure analysis for module_10_data.csv
+2025-04-23 10:23:55,717 - INFO - Running GoFigure analysis for module_100_data.csv
+2025-04-23 10:23:55,719 - INFO - Creating GoFigure input for module 100
+2025-04-23 10:23:55,719 - INFO - Saved GoFigure input file to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/GoFigure/module_100_data/module_100_GO_Terms.tsv
+2025-04-23 10:23:55,719 - INFO - Found GoFigure script at /Users/bigyambat/miniforge3/pkgs/go-figure-1.0.2-hdfd78af_0/python-scripts/gofigure.py
+2025-04-23 10:23:57,301 - INFO - Completed GoFigure analysis for module_100_data.csv
+2025-04-23 10:23:57,302 - INFO - Running GoFigure analysis for module_101_data.csv
+2025-04-23 10:23:57,303 - INFO - Creating GoFigure input for module 101
+2025-04-23 10:23:57,304 - INFO - Saved GoFigure input file to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/GoFigure/module_101_data/module_101_GO_Terms.tsv
+2025-04-23 10:23:57,304 - INFO - Found GoFigure script at /Users/bigyambat/miniforge3/pkgs/go-figure-1.0.2-hdfd78af_0/python-scripts/gofigure.py
+2025-04-23 10:23:58,879 - INFO - Completed GoFigure analysis for module_101_data.csv
+2025-04-23 10:23:58,880 - INFO - Running GoFigure analysis for module_102_data.csv
+2025-04-23 10:23:58,881 - INFO - Creating GoFigure input for module 102
+2025-04-23 10:23:58,882 - INFO - Saved GoFigure input file to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/GoFigure/module_102_data/module_102_GO_Terms.tsv
+2025-04-23 10:23:58,882 - INFO - Found GoFigure script at /Users/bigyambat/miniforge3/pkgs/go-figure-1.0.2-hdfd78af_0/python-scripts/gofigure.py
+2025-04-23 10:24:00,781 - INFO - Completed GoFigure analysis for module_102_data.csv
+2025-04-23 10:24:00,782 - INFO - Running GoFigure analysis for module_103_data.csv
+2025-04-23 10:24:00,784 - INFO - Creating GoFigure input for module 103
+2025-04-23 10:24:00,784 - INFO - Saved GoFigure input file to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/GoFigure/module_103_data/module_103_GO_Terms.tsv
+2025-04-23 10:24:00,785 - INFO - Found GoFigure script at /Users/bigyambat/miniforge3/pkgs/go-figure-1.0.2-hdfd78af_0/python-scripts/gofigure.py
+2025-04-23 10:24:02,362 - INFO - Completed GoFigure analysis for module_103_data.csv
+2025-04-23 10:24:02,362 - INFO - Running GoFigure analysis for module_11_data.csv
+2025-04-23 10:24:02,364 - INFO - Creating GoFigure input for module 11
+2025-04-23 10:24:02,366 - INFO - Saved GoFigure input file to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/GoFigure/module_11_data/module_11_GO_Terms.tsv
+2025-04-23 10:24:02,366 - INFO - Found GoFigure script at /Users/bigyambat/miniforge3/pkgs/go-figure-1.0.2-hdfd78af_0/python-scripts/gofigure.py
+2025-04-23 10:24:04,830 - INFO - Completed GoFigure analysis for module_11_data.csv
+2025-04-23 10:24:04,831 - INFO - Running GoFigure analysis for module_12_data.csv
+2025-04-23 10:24:04,833 - INFO - Creating GoFigure input for module 12
+2025-04-23 10:24:04,834 - INFO - Saved GoFigure input file to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/GoFigure/module_12_data/module_12_GO_Terms.tsv
+2025-04-23 10:24:04,834 - INFO - Found GoFigure script at /Users/bigyambat/miniforge3/pkgs/go-figure-1.0.2-hdfd78af_0/python-scripts/gofigure.py
+2025-04-23 10:24:06,444 - INFO - Completed GoFigure analysis for module_12_data.csv
+2025-04-23 10:24:06,444 - INFO - Running GoFigure analysis for module_13_data.csv
+2025-04-23 10:24:06,446 - INFO - Creating GoFigure input for module 13
+2025-04-23 10:24:06,447 - INFO - Saved GoFigure input file to /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/GoFigure/module_13_data/module_13_GO_Terms.tsv
+2025-04-23 10:24:06,447 - INFO - Found GoFigure script at /Users/bigyambat/miniforge3/pkgs/go-figure-1.0.2-hdfd78af_0/python-scripts/gofigure.py

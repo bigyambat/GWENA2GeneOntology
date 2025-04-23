@@ -1,0 +1,2 @@
+osgi.wiring.host; (&(osgi.wiring.host=org.cytoscape.application-impl)(bundle-version>=0.0.0))
+54
