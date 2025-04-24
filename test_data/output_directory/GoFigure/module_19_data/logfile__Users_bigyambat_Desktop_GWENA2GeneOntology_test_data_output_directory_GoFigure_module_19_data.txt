@@ -1,0 +1,25 @@
+GO-Figure! version: 1.0.1
+
+Date run: 2025-04-24
+
+Command line input: ['/Users/bigyambat/miniforge3/pkgs/go-figure-1.0.2-hdfd78af_0/python-scripts/gofigure.py', '-i', '/Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/GoFigure/module_19_data/module_19_GO_Terms.tsv', '-o', '/Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory/GoFigure/module_19_data']
+
+go.obo version used: releases/2023-04-01
+
+go.obo version used to create GO relations: releases/2023-04-01
+
+
+Calculating biological process
+
+No GO terms for ontology found: biological_process
+
+
+Calculating molecular function
+
+No GO terms for ontology found: molecular_function
+
+
+Calculating cellular component
+
+No GO terms for ontology found: cellular_component
+

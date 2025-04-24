@@ -1,0 +1,5 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0070013	GO:0043233	organelle lumen	1.521e-02	0.000e+00	2.995e+00	1.011e-03
+GO:0070013	GO:0070013	intracellular organelle lumen	1.521e-02	0.000e+00	2.995e+00	1.011e-03
+GO:0005654	GO:0005654	nucleoplasm	3.015e-02	0.000e+00	2.956e+00	1.106e-03
+GO:0005737	GO:0005737	cytoplasm	4.478e-02	0.000e+00	8.365e-01	1.457e-01

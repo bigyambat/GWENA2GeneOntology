@@ -1,0 +1,10 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0005737	GO:0005737	cytoplasm	1.058e-05	0.000e+00	8.365e-01	1.457e-01
+GO:0098588	GO:0098588	bounding membrane of organelle	3.645e-03	0.000e+00	2.044e+00	9.033e-03
+GO:0098588	GO:0031090	organelle membrane	1.035e-02	0.000e+00	1.466e+00	3.418e-02
+GO:0001772	GO:0001772	immunological synapse	3.990e-03	0.000e+00	5.003e+00	9.943e-06
+GO:0045121	GO:0045121	membrane raft	6.866e-03	0.000e+00	3.751e+00	1.776e-04
+GO:0045121	GO:0098857	membrane microdomain	7.121e-03	0.000e+00	3.749e+00	1.780e-04
+GO:0005829	GO:0005829	cytosol	1.469e-02	0.000e+00	2.561e+00	2.749e-03
+GO:0016020	GO:0016020	membrane	1.607e-02	0.000e+00	2.812e-01	5.233e-01
+GO:0012505	GO:0012505	endomembrane system	3.110e-02	0.000e+00	3.520e+00	3.021e-04

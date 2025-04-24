@@ -1,0 +1,5 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0005161	GO:0005161	platelet-derived growth factor receptor binding	8.943e-04	0.000e+00	5.883e+00	1.309e-06
+GO:0005017	GO:0005017	platelet-derived growth factor receptor activity	4.192e-03	0.000e+00	5.653e+00	2.223e-06
+GO:0038085	GO:0038085	vascular endothelial growth factor binding	8.375e-03	0.000e+00	6.235e+00	5.822e-07
+GO:0038085	GO:0019838	growth factor binding	4.653e-02	0.000e+00	4.289e+00	5.136e-05

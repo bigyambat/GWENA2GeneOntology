@@ -61,12 +61,13 @@ logger = logging.getLogger(__name__)
 
 
 class GWENAAnalysis:
-    def __init__(self, input_file: str, output_dir: str, metascape_location: str, gene_list_excel: str = None):
+    def __init__(self, input_file: str, output_dir: str, metascape_location: str, gene_list_excel: str = None) -> None:
         self.input_file = input_file
         self.output_dir = Path(output_dir)
         self.metascape_location = Path(metascape_location)
         self.gene_list_excel = gene_list_excel
         self._validate_inputs()
+        self._check_docker_running()
 
     def _validate_inputs(self) -> None:
         logger.info("Validating inputs...")
@@ -89,6 +90,13 @@ class GWENAAnalysis:
 
         self.output_dir.mkdir(parents=True, exist_ok=True)
         logger.info(f"Output directory created/confirmed: {self.output_dir}")
+    
+    def _check_docker_running(self) -> None:
+        try:
+            subprocess.run(["docker", "info"], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        except subprocess.CalledProcessError as e:
+            logger.error("Docker is not running or not installed.")
+            raise RuntimeError("Docker is not running or not installed.") from e
 
     def create_gene_list(self, sample_sheet: pd.DataFrame) -> List[Path]:
         logger.info("Creating module files using query values")
@@ -139,10 +147,11 @@ class GWENAAnalysis:
                     logger.warning(f"Sheet {sheet_name} is empty. Skipping.")
                     continue
 
-                output_path = self.output_dir / "metascape_output" / f"module_{sheet_name}"
+                output_path = self.output_dir / "metascape" / f"module_{sheet_name}"
                 output_path.mkdir(parents=True, exist_ok=True)
 
-                gene_list_file = output_path / f"module_{sheet_name}_gene_list.txt"
+                gene_list_file = output_path / "metascape" / f"module_{sheet_name}_gene_list.txt"
+                gene_list_file.parent.mkdir(parents=True, exist_ok=True)
 
                 df.iloc[:, [0]].dropna().to_csv(gene_list_file, index=False, header=["Gene"])
 
@@ -150,9 +159,11 @@ class GWENAAnalysis:
 
                 os.chdir(self.metascape_location)
 
+                # Metascape command for mouse genome analysis
                 command = [
                     str(metascape_script),  # path to your shell script, e.g., /path/to/ms.sh
                     "-u",
+                    "-S", "10090",  # Mouse taxonomy ID
                     "-o", str(output_path),
                     str(gene_list_file)
                 ]

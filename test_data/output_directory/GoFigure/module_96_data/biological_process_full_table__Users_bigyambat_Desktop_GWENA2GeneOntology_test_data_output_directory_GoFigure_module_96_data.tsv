@@ -1,0 +1,4 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0006581	GO:0006581	acetylcholine catabolic process	5.359e-03	0.000e+00	5.672e+00	2.130e-06
+GO:0006581	GO:0008291	acetylcholine metabolic process	3.741e-02	0.000e+00	5.515e+00	3.057e-06
+GO:0006581	GO:1900619	acetate ester metabolic process	3.741e-02	0.000e+00	5.501e+00	3.157e-06
