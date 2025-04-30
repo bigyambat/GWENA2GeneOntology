@@ -1,8 +1,0 @@
-Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
-GO:0005515	GO:0005515	protein binding	4.132e-18	0.000e+00	1.929e+00	1.178e-02
-GO:0005515	GO:0019899	enzyme binding	5.637e-09	0.000e+00	3.007e+00	9.836e-04
-GO:0005515	GO:0051020	GTPase binding	2.280e-02	0.000e+00	3.538e+00	2.898e-04
-GO:0005515	GO:0008134	transcription factor binding	3.367e-03	0.000e+00	3.716e+00	1.923e-04
-GO:0005515	GO:0140297	DNA-binding transcription factor binding	3.563e-02	0.000e+00	4.005e+00	9.877e-05
-GO:0003824	GO:0003824	catalytic activity	1.152e-04	0.000e+00	2.675e-01	5.402e-01
-GO:0030674	GO:0030674	protein-macromolecule adaptor activity	5.779e-03	0.000e+00	3.658e+00	2.196e-04

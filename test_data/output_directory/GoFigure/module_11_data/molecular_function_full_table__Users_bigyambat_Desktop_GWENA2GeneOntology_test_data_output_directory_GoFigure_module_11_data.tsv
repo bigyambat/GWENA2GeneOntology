@@ -1,8 +1,0 @@
-Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
-GO:0003823	GO:0003823	antigen binding	1.493e-03	0.000e+00	5.310e+00	4.898e-06
-GO:0004896	GO:0004896	cytokine receptor activity	6.950e-03	0.000e+00	3.938e+00	1.153e-04
-GO:0004896	GO:0038023	signaling receptor activity	1.876e-02	0.000e+00	2.292e+00	5.101e-03
-GO:0004896	GO:0060089	molecular transducer activity	1.876e-02	0.000e+00	2.265e+00	5.437e-03
-GO:0034987	GO:0034987	immunoglobulin receptor binding	3.444e-02	0.000e+00	5.979e+00	1.048e-06
-GO:0001540	GO:0001540	amyloid-beta binding	3.938e-02	0.000e+00	4.532e+00	2.938e-05
-GO:0030369	GO:0030369	ICAM-3 receptor activity	4.971e-02	0.000e+00	6.935e+00	1.160e-07

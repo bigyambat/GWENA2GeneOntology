@@ -1,5 +1,0 @@
-Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
-GO:0005515	GO:0005515	protein binding	6.045e-05	0.000e+00	1.929e+00	1.178e-02
-GO:0005515	GO:0019899	enzyme binding	2.321e-02	0.000e+00	3.007e+00	9.836e-04
-GO:0005515	GO:0019901	protein kinase binding	2.747e-02	0.000e+00	3.792e+00	1.615e-04
-GO:0005515	GO:0019900	kinase binding	4.785e-02	0.000e+00	3.707e+00	1.965e-04

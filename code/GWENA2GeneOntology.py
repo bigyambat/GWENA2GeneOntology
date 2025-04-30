@@ -33,17 +33,7 @@ import subprocess
 import os
 import logging
 import sys
-from typing import List, Dict
-from pathlib import Path
-import matplotlib.pyplot as plt
-import pandas as pd
-import numpy as np
-import docker
-import argparse
-import subprocess
-import os
-import logging
-import sys
+import json
 from typing import List, Dict
 from pathlib import Path
 import matplotlib.pyplot as plt
@@ -66,6 +56,9 @@ class GWENAAnalysis:
         self.output_dir = Path(output_dir)
         self.metascape_location = Path(metascape_location)
         self.gene_list_excel = gene_list_excel
+        # Create a data directory specifically for Metascape inputs and outputs
+        self.metascape_data_dir = self.metascape_location / "data"
+        self.metascape_data_dir.mkdir(exist_ok=True)
         self._validate_inputs()
         self._check_docker_running()
 
@@ -75,8 +68,11 @@ class GWENAAnalysis:
             raise FileNotFoundError(f"Input file {self.input_file} not found")
         logger.info(f"Input file confirmed: {self.input_file}")
 
-        if not Path(self.gene_list_excel).exists() and self.gene_list_excel:
+        if self.gene_list_excel and not Path(self.gene_list_excel).exists():
             raise FileNotFoundError(f"Gene list Excel file {self.gene_list_excel} not found")
+        elif self.gene_list_excel:
+            logger.info(f"Gene list Excel file confirmed: {self.gene_list_excel}")
+        else:
             logger.info("No gene list Excel file provided. Skipping Metascape Excel input.")
 
         if not Path(self.metascape_location).exists():
@@ -88,12 +84,17 @@ class GWENAAnalysis:
             raise FileNotFoundError(f"Metascape script not found at {metascape_script}")
         logger.info(f"Metascape script confirmed: {metascape_script}")
 
+        # Make sure the data directory exists in the Metascape location
+        self.metascape_data_dir.mkdir(parents=True, exist_ok=True)
+        logger.info(f"Metascape data directory created/confirmed: {self.metascape_data_dir}")
+
         self.output_dir.mkdir(parents=True, exist_ok=True)
         logger.info(f"Output directory created/confirmed: {self.output_dir}")
     
     def _check_docker_running(self) -> None:
         try:
             subprocess.run(["docker", "info"], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            logger.info("Docker is running and available.")
         except subprocess.CalledProcessError as e:
             logger.error("Docker is not running or not installed.")
             raise RuntimeError("Docker is not running or not installed.") from e
@@ -127,60 +128,141 @@ class GWENAAnalysis:
         logger.info(f"Processing {len(module_files)} module files for GO analysis")
         return module_files
 
-    def run_metascape_from_excel(self):
+    def prepare_gene_lists_from_excel(self):
+        """Prepare gene lists from Excel file for Metascape analysis"""
         if not self.gene_list_excel:
             logger.warning("No gene list Excel file provided. Skipping Metascape Excel input.")
-            return
+            return []
 
-        logger.info(f"Running Metascape using gene list Excel file: {self.gene_list_excel}")
-
-        license_path = self.metascape_location / "license" / "license.txt"
-
-        if not license_path.exists():
-            logger.error(f"License file not found at {license_path}")
-            raise FileNotFoundError(f"License file not found at {license_path}")
+        logger.info(f"Preparing gene lists from Excel file: {self.gene_list_excel}")
 
         try:
             excel_data = pd.read_excel(self.gene_list_excel, sheet_name=None)
+            
+            metascape_input_dir = self.metascape_data_dir / "input_lists"
+            metascape_input_dir.mkdir(parents=True, exist_ok=True)
+            
+            job_tasks = []
+            
             for sheet_name, df in excel_data.items():
                 if df.empty:
                     logger.warning(f"Sheet {sheet_name} is empty. Skipping.")
                     continue
+                
+                # Create a directory inside metascape data for each module
+                module_input_dir = metascape_input_dir / f"module_{sheet_name}"
+                module_input_dir.mkdir(parents=True, exist_ok=True)
+                
+                # Create the gene list file
+                gene_list_file = module_input_dir / f"gene_list.txt"
+                
+                # Get the first column (genes) and drop NA values
+                genes_column = df.iloc[:, 0].dropna().astype(str).str.strip()
 
-                output_path = self.output_dir / "metascape" / f"module_{sheet_name}"
-                output_path.mkdir(parents=True, exist_ok=True)
+                # Write the gene list to a text file
+                with open(gene_list_file, 'w') as f:
+                    f.write("Gene\n")
+                    genes_column.to_csv(f, index=False, header=False)
+                logger.info(f"Saved gene list for module {sheet_name} to {gene_list_file}")
 
-                gene_list_file = output_path / "metascape" / f"module_{sheet_name}_gene_list.txt"
-                gene_list_file.parent.mkdir(parents=True, exist_ok=True)
-
-                df.iloc[:, [0]].dropna().to_csv(gene_list_file, index=False, header=["Gene"])
-
-                metascape_script = self.metascape_location / "bin" / "ms.sh"
-
-                os.chdir(self.metascape_location)
-
-                # Metascape command for mouse genome analysis
-                command = [
-                    str(metascape_script),  # path to your shell script, e.g., /path/to/ms.sh
-                    "-u",
-                    "-S", "10090",  # Mouse taxonomy ID
-                    "-o", str(output_path),
-                    str(gene_list_file)
-                ]
-
-                result = subprocess.run(command, capture_output=True, text=True)
-                logger.info("Metascape stdout:\n" + result.stdout)
-                logger.info("Metascape stderr:\n" + result.stderr)
-
-                if result.returncode != 0:
-                    logger.error(f"Metascape Error for module {sheet_name}: {result.stderr}")
-                else:
-                    logger.info(f"Completed Metascape for module {sheet_name}. Output: {output_path}")
-
+                # Define output directory for this module
+                output_dir = self.metascape_data_dir / "outputs" / f"module_{sheet_name}"
+                output_dir.mkdir(parents=True, exist_ok=True)
+                
+                # Create a job task for this module
+                relative_input_path = f"input_lists/module_{sheet_name}/gene_list.txt"
+                relative_output_path = f"outputs/module_{sheet_name}"
+                
+                task = {
+                    "input": relative_input_path,
+                    "output": relative_output_path,
+                    "single": True,  # Using single-gene-list format
+                    "taxon": 9606,  # Human taxonomy ID
+                }
+                
+                job_tasks.append(task)
+                logger.info(f"Prepared gene list for module {sheet_name}")
+            
+            if job_tasks:
+                # Create a job file to run all the analysis at once
+                job_file_path = self.metascape_data_dir / "metascape_job.job"
+                
+                with open(job_file_path, 'w') as f:
+                    for task in job_tasks:
+                        f.write(json.dumps(task) + "\n")
+                
+                logger.info(f"Created job file with {len(job_tasks)} tasks at {job_file_path}")
+                return job_file_path
+            else:
+                logger.warning("No valid gene lists found in Excel file.")
+                return None
+                
         except Exception as e:
-            logger.error(f"Failed to run Metascape from Excel: {e}")
+            logger.error(f"Failed to prepare gene lists from Excel: {e}")
             raise
 
+    def run_metascape_job(self, job_file_path):
+        """Run Metascape analysis using the job file"""
+        if job_file_path is None:
+            logger.warning("No job file provided. Skipping Metascape analysis.")
+            return False
+            
+        logger.info(f"Running Metascape using job file: {job_file_path}")
+        
+        metascape_script = self.metascape_location / "bin" / "ms.sh"
+        
+        # Change to the Metascape directory
+        os.chdir(self.metascape_location)
+        
+        # Get the relative path to the job file from the Metascape data directory
+        rel_job_path = os.path.relpath(job_file_path, self.metascape_location)
+        
+        # Run the job file with Metascape
+        command = [str(metascape_script), rel_job_path]
+        
+        try:
+            logger.info(f"Executing command: {' '.join(command)}")
+            result = subprocess.run(command, capture_output=True, text=True)
+            
+            logger.info("Metascape stdout:\n" + result.stdout)
+            
+            if result.stderr:
+                logger.warning("Metascape stderr:\n" + result.stderr)
+            
+            if result.returncode != 0:
+                logger.error(f"Metascape Error: {result.stderr}")
+                return False
+            else:
+                logger.info(f"Completed Metascape analysis for all modules")
+                return True
+        except Exception as e:
+            logger.error(f"Failed to run Metascape: {e}")
+            raise
+
+    def copy_results_to_output_dir(self):
+        """Copy Metascape results from data directory to output directory"""
+        metascape_output_dir = self.metascape_data_dir / "outputs"
+        final_output_dir = self.output_dir / "metascape_results"
+        final_output_dir.mkdir(parents=True, exist_ok=True)
+        
+        try:
+            # Copy all Metascape output directories to the final output directory
+            logger.info(f"Copying Metascape results from {metascape_output_dir} to {final_output_dir}")
+            
+            if not metascape_output_dir.exists():
+                logger.warning(f"No Metascape outputs found at {metascape_output_dir}")
+                return
+                
+            # Use subprocess to copy the files (platform independent)
+            if os.name == 'nt':  # Windows
+                subprocess.run(["xcopy", str(metascape_output_dir), str(final_output_dir), "/E", "/I", "/Y"])
+            else:  # Unix-like
+                subprocess.run(["cp", "-r", str(metascape_output_dir) + "/*", str(final_output_dir)])
+                
+            logger.info(f"Successfully copied Metascape results to {final_output_dir}")
+        except Exception as e:
+            logger.error(f"Failed to copy Metascape results: {e}")
+            
     def create_gofigure_input(self, module_df: pd.DataFrame, module_num: int, output_dir: Path) -> Path:
         logger.info(f"Creating GoFigure input for module {module_num}")
         if 'term_id' not in module_df.columns or 'p_value' not in module_df.columns:
@@ -204,6 +286,7 @@ class GWENAAnalysis:
             module_num = int(module_df['query'].iloc[0]) if 'query' in module_df.columns else 0
             go_input_file = self.create_gofigure_input(module_df, module_num, output_path)
 
+            # Try to find gofigure script in various locations
             gofigure_script = Path.home() / "miniforge3/pkgs/go-figure-1.0.2-hdfd78af_0/python-scripts/gofigure.py"
             if not gofigure_script.exists():
                 conda_prefix = os.environ.get('CONDA_PREFIX')
@@ -267,30 +350,41 @@ def main():
         logger.info("Sample of input data:")
         logger.info(f"\n{sample_sheet.head().to_string()}")
 
+        # Initialize analysis object
         analysis = GWENAAnalysis(args.gwena_enrichment_file, args.output_directory, args.metascape_download_location, args.gene_list_excel)
+        
+        # Process GO analysis for GWENA enrichment file
         module_files = analysis.create_gene_list(sample_sheet)
-
+        
+        # Run Metascape if gene list Excel is provided
         if args.gene_list_excel:
             try:
-                analysis.run_metascape_from_excel()
+                # Prepare gene lists and create job file
+                job_file_path = analysis.prepare_gene_lists_from_excel()
+                
+                # Run Metascape using job file
+                if job_file_path:
+                    success = analysis.run_metascape_job(job_file_path)
+                    
+                    # Copy results to output directory if successful
+                    if success:
+                        analysis.copy_results_to_output_dir()
             except Exception as e:
                 logger.error(f"Metascape analysis failed: {str(e)}")
-                return
 
+        # Run GoFigure analysis
         if not module_files:
-            logger.error("No module files were created! Analysis cannot continue.")
-            return
-
-        go_module_files = analysis.select_GO_genes_and_pvalue(module_files)
-        if not go_module_files:
-            logger.error("No files available for analysis!")
-            return
-
-        for module_file in go_module_files:
-            try:
-                analysis.run_go_figure_analysis(module_file)
-            except Exception as e:
-                logger.error(f"GoFigure analysis failed for {module_file}: {str(e)}")
+            logger.error("No module files were created! GoFigure analysis cannot continue.")
+        else:
+            go_module_files = analysis.select_GO_genes_and_pvalue(module_files)
+            if not go_module_files:
+                logger.error("No files available for GoFigure analysis!")
+            else:
+                for module_file in go_module_files:
+                    try:
+                        analysis.run_go_figure_analysis(module_file)
+                    except Exception as e:
+                        logger.error(f"GoFigure analysis failed for {module_file}: {str(e)}")
 
         logger.info("Analysis Completed")
 

@@ -1,9 +1,0 @@
-Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
-GO:0023051	GO:0023051	regulation of signaling	1.491e-03	0.000e+00	2.564e+00	2.727e-03
-GO:0023051	GO:0009967	positive regulation of signal transduction	1.847e-02	0.000e+00	3.216e+00	6.082e-04
-GO:0010646	GO:0010646	regulation of cell communication	1.539e-03	0.000e+00	2.568e+00	2.703e-03
-GO:0035556	GO:0035556	intracellular signal transduction	8.917e-03	0.000e+00	1.856e+00	1.392e-02
-GO:0048583	GO:0048583	regulation of response to stimulus	1.663e-02	0.000e+00	2.269e+00	5.377e-03
-GO:0032761	GO:0032761	positive regulation of lymphotoxin A production	2.861e-02	0.000e+00	6.840e+00	1.444e-07
-GO:0032761	GO:0032681	regulation of lymphotoxin A production	2.861e-02	0.000e+00	6.840e+00	1.444e-07
-GO:0032641	GO:0032641	lymphotoxin A production	2.861e-02	0.000e+00	8.474e+00	3.359e-09

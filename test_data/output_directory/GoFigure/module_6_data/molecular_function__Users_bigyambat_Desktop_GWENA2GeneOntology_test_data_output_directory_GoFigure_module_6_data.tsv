@@ -1,2 +1,0 @@
-dotCount	x	y	frequency	colour	size	pval	description	legend	members	representative	user
-1	0.0	0.0	0.6568811842843291	-4.218584722816487	1.6094379124341003	6.04526407925854e-05	protein binding	1. protein binding	['GO:0005515', 'GO:0019899', 'GO:0019901', 'GO:0019900']	GO:0005515	0

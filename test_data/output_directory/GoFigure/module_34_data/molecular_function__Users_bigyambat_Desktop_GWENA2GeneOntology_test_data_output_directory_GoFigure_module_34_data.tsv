@@ -1,2 +1,0 @@
-dotCount	x	y	frequency	colour	size	pval	description	legend	members	representative	user
-1	0.0	0.0	1.556630272795644	-2.8257774640689726	2.302585092994046	0.0014935595252625	histone H3K36 methyltransferase act...	1. histone H3K36 methyltransferase act...	['GO:0046975', 'GO:0140955', 'GO:0140938', 'GO:0042054', 'GO:0042800', 'GO:0016279', 'GO:0016278', 'GO:0008276', 'GO:0008170']	GO:0046975	0

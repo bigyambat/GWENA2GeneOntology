@@ -1,2 +1,0 @@
-dotCount	x	y	frequency	colour	size	pval	description	legend	members	representative	user
-1	0.0	0.0	0.14515805846908478	-1.780147611396995	1.6094379124341003	0.0165902292994087	nucleobase-containing compound bios...	1. nucleobase-containing compound bios...	['GO:0018130', 'GO:0034654', 'GO:0019438', 'GO:0044271']	GO:0034654	0
