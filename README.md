@@ -1,6 +1,6 @@
 # GWENA2GeneOntology
 
-**GWENA2GeneOntology** is a Python-based pipeline for integrating GWENA enrichment results with functional analysis tools—**Metascape** and **GoFigure!**. It streamlines module-wise GO term analysis, automating the generation of input files, Metascape enrichment, and GO term visualization.
+**GWENA2GeneOntology** is a Python-based pipeline for integrating Gene Co-Expression Network Analysis (GWENA) enrichment results with functional analysis tools—**Metascape** and **GoFigure!**. It streamlines module-wise GO term analysis, automating the generation of input files, Metascape enrichment, and GO term visualization.
 
 ---
 
