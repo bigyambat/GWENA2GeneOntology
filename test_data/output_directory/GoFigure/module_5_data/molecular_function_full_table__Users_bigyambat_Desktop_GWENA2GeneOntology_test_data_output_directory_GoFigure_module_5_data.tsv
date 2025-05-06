@@ -1,0 +1,9 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0005515	GO:0005515	protein binding	3.395e-12	0.000e+00	1.929e+00	1.178e-02
+GO:0005515	GO:0019900	kinase binding	1.384e-03	0.000e+00	3.707e+00	1.965e-04
+GO:0005515	GO:0019901	protein kinase binding	4.861e-03	0.000e+00	3.792e+00	1.615e-04
+GO:0005488	GO:0005488	binding	5.168e-05	0.000e+00	4.202e-01	3.800e-01
+GO:0005488	GO:0097367	carbohydrate derivative binding	2.774e-02	0.000e+00	1.078e+00	8.362e-02
+GO:0044877	GO:0044877	protein-containing complex binding	8.184e-03	0.000e+00	2.806e+00	1.561e-03
+GO:0003824	GO:0003824	catalytic activity	1.026e-02	0.000e+00	2.675e-01	5.402e-01
+GO:0016773	GO:0016773	phosphotransferase activity, alcohol group as acceptor	3.250e-02	0.000e+00	1.689e+00	2.047e-02

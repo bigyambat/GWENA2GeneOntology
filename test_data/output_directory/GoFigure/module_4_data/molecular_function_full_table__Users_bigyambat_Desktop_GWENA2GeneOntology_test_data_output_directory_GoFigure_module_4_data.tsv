@@ -1,0 +1,5 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0005515	GO:0005515	protein binding	4.614e-13	0.000e+00	1.929e+00	1.178e-02
+GO:0003824	GO:0003824	catalytic activity	2.836e-03	0.000e+00	2.675e-01	5.402e-01
+GO:0003824	GO:0016740	transferase activity	3.201e-02	0.000e+00	7.339e-01	1.846e-01
+GO:0004630	GO:0004630	phospholipase D activity	4.998e-02	0.000e+00	4.199e+00	6.320e-05

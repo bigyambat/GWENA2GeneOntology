@@ -1,2 +1,2 @@
-{"input": "input_lists/module_1/gene_list.txt", "output": "outputs/module_1", "single": true, "taxon": 9606}
-{"input": "input_lists/module_2/gene_list.txt", "output": "outputs/module_2", "single": true, "taxon": 9606}
+{"input": "input_lists/module_1/gene_list.txt", "output": "outputs/module_1", "single": true, "taxon": 10090}
+{"input": "input_lists/module_2/gene_list.txt", "output": "outputs/module_2", "single": true, "taxon": 10090}

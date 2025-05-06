@@ -1,10 +1,10 @@
-Apr 30, 2025 4:39:16 PM org.apache.karaf.main.Main launch
+May 06, 2025 1:52:05 PM org.apache.karaf.main.Main launch
 INFO: Installing and starting initial bundles
-Apr 30, 2025 4:39:17 PM org.apache.karaf.main.Main launch
+May 06, 2025 1:52:05 PM org.apache.karaf.main.Main launch
 INFO: All initial bundles installed and set to start
-Apr 30, 2025 4:39:17 PM org.apache.karaf.main.lock.SimpleFileLock lock
+May 06, 2025 1:52:05 PM org.apache.karaf.main.lock.SimpleFileLock lock
 INFO: Trying to lock /data/logs/CytoscapeConfiguration/3/karaf_data/lock
-Apr 30, 2025 4:39:17 PM org.apache.karaf.main.lock.SimpleFileLock lock
+May 06, 2025 1:52:05 PM org.apache.karaf.main.lock.SimpleFileLock lock
 INFO: Lock acquired
-Apr 30, 2025 4:39:17 PM org.apache.karaf.main.Main$KarafLockCallback lockAcquired
+May 06, 2025 1:52:05 PM org.apache.karaf.main.Main$KarafLockCallback lockAcquired
 INFO: Lock acquired. Setting startlevel to 100

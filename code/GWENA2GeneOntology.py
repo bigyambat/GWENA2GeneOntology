@@ -25,6 +25,10 @@
 # Test Run
 # /Users/bigyambat/miniforge3/envs/gwenav2/bin/python3 /Users/bigyambat/Desktop/GWENA2GeneOntology/code/GWENA2GeneOntology.py --gwena_enrichment_file /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/Enrichment_Complete.xlsx --output_directory /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/output_directory --metascape_download_location /Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101 --gene_list_excel /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/Module_Genes_Post_Filtering.xlsx
 
+# /Users/bigyambat/miniforge3/envs/gwenav2/bin/python3 /Users/bigyambat/Desktop/GWENA2GeneOntology/code/GWENA2GeneOntology.py --gwena_enrichment_file /Users/bigyambat/Desktop/spaceranger_concat_runs/GWENA_data/GWENA_In_House_Mauduit_Cross_Comparison/Enrichment/Enrichment_Post_In_House_Cross_Comparison.xlsx --output_directory /Users/bigyambat/Desktop/spaceranger_concat_runs/GWENA_data/GWENA_In_House_Mauduit_Cross_Comparison/GWENA2GeneOntology_Results --metascape_download_location /Users/bigyambat/Desktop/GWENA2GeneOntology/msbio_v3.5.20250101 --gene_list_excel /Users/bigyambat/Desktop/GWENA2GeneOntology/test_data/Module_Genes_Post_Filtering.xlsx
+
+
+
 import pandas as pd
 import numpy as np
 import docker
@@ -157,13 +161,16 @@ class GWENAAnalysis:
                 gene_list_file = module_input_dir / f"gene_list.txt"
                 
                 # Get the first column (genes) and drop NA values
-                genes_column = df.iloc[:, 0].dropna().astype(str).str.strip()
+                genes_column = df.iloc[:, 0].dropna().astype(str).str.strip().str.upper()
 
-                # Write the gene list to a text file
-                with open(gene_list_file, 'w') as f:
+                genes_column = genes_column[
+                genes_column.str.match(r'^[A-Z0-9\-_.]+$') & ~genes_column.str.contains(r'\d+\.\d+')
+                ]
+
+                with open(gene_list_file, "w", encoding="utf-8") as f:
                     f.write("Gene\n")
-                    genes_column.to_csv(f, index=False, header=False)
-                logger.info(f"Saved gene list for module {sheet_name} to {gene_list_file}")
+                    for gene in genes_column:
+                        f.write(f"{gene}\n")
 
                 # Define output directory for this module
                 output_dir = self.metascape_data_dir / "outputs" / f"module_{sheet_name}"
@@ -177,7 +184,7 @@ class GWENAAnalysis:
                     "input": relative_input_path,
                     "output": relative_output_path,
                     "single": True,  # Using single-gene-list format
-                    "taxon": 9606,  # Human taxonomy ID
+                    "taxon": 10090,  # Mouse taxonomy ID
                 }
                 
                 job_tasks.append(task)
