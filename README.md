@@ -5,7 +5,7 @@
 
 ---
 
-## 🔧 Features
+##  Features
 
 - Converts GWENA enrichment files into per-module datasets  
 - Automatically prepares input gene lists for Metascape  
@@ -15,7 +15,7 @@
 
 ---
 
-## 📦 Installation & Environment Setup
+##  Installation & Environment Setup
 
 1. **Clone this Repository**
    ```bash
@@ -44,7 +44,7 @@
 
 ---
 
-## 🧬 Metascape (MSBio) Setup
+##  Metascape (MSBio) Setup
 
 To perform enrichment analysis, you must download and configure the **Metascape for Bioinformaticians (MSBio)** toolkit.
 
@@ -64,7 +64,7 @@ To perform enrichment analysis, you must download and configure the **Metascape 
 5. Metascape script for Docker will be located at:  
    `msbio_v3.5.20250101/bin/ms.sh`
 
-### 🔹 MSBio Usage
+###  MSBio Usage
 
 - Multi-gene list syntax:
   ```bash
@@ -88,13 +88,13 @@ To perform enrichment analysis, you must download and configure the **Metascape 
   bin/sms.sh
   ```
 
-### ⚠️ MSBio Notes
+###  MSBio Notes
 
 - `-S` sets the source organism (e.g., `-S 10090` for mouse)
 - Use `--option option.json` to pass custom configuration
 - Allocate at least 8GB memory to Docker to prevent crashes
 
-### 🔹 Batch Mode Using `.job` Files
+###  Batch Mode Using `.job` Files
 
 To run multiple jobs:
 
@@ -112,7 +112,7 @@ Use `#` for comments. Logs include `START>` and `COMPLETE>` markers.
 
 ---
 
-## 🚀 Command Line Usage
+##  Command Line Usage
 
 ```bash
 python GWENA2GeneOntology.py \
@@ -133,7 +133,7 @@ python GWENA2GeneOntology.py \
 
 ---
 
-## ✅ Example Run
+## Example Run
 
 ```bash
 python GWENA2GeneOntology.py \
@@ -145,7 +145,7 @@ python GWENA2GeneOntology.py \
 
 ---
 
-## 📁 Output Structure
+##  Output Structure
 
 - `module_gene_list/`: Cleaned per-module gene enrichment tables  
 - `metascape_results/`: MSBio GO enrichment results  
@@ -153,7 +153,7 @@ python GWENA2GeneOntology.py \
 
 ---
 
-## ✅ CI/CD & Package Readiness
+## CI/CD & Package Readiness
 
 This repository includes a tested and validated continuous integration (CI) pipeline using **GitHub Actions**. Each push and pull request automatically triggers:
 
@@ -169,14 +169,14 @@ All required dependencies are declared in the `environment.yml` or `requirements
 
 ---
 
-## 📬 Support
+## Support
 
 Report issues or feature requests at:  
 [https://github.com/bigyambat/GWENA2GeneOntology/issues](https://github.com/bigyambat/GWENA2GeneOntology/issues)
 
 ---
 
-## 📚 Citations
+## Citations
 
 If you use this pipeline, please cite the following:
 
@@ -190,6 +190,6 @@ If you use this pipeline, please cite the following:
 
 ---
 
-## 📄 License
+## License
 
 Distributed under the MIT License. See `LICENSE` for more details.
